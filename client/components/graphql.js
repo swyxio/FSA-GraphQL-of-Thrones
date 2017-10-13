@@ -12,7 +12,7 @@ export default class CustomGraphiQL extends React.Component {
 
       // OPTIONAL PARAMETERS
       // GraphQL artifacts
-      query: "{\n   #write your query here\n}",
+      query: "{\n    #write your query here\n    \n    \n}",
       variables: "",
       response: "",
 

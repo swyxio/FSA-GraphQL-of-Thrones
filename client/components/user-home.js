@@ -37,27 +37,31 @@ class UserHome extends React.Component {
     return (
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
         <div style={{ flex: 1 }}>
-          <p>
-            Current Level: {gamestate.currentLevel}
-            Completed Levels: {JSON.stringify(gamestate.completedLevels)}
-          </p>
           <h1>
-            {gamestate.levelInfo.title}
+            Level {gamestate.currentLevel}: {gamestate.levelInfo.title}
           </h1>
-          <p>
+          <blockquote>
             {gamestate.levelInfo.text}
-          </p>
-          {/*JSON.stringify(gamestate)*/}
+          </blockquote>
         </div>
         <CustomGraphiQL fetcher={graphQLFetcher(handleCorrectAnswer)} />
-        <div style={{ height: "100px" }}>
-          <p>click to proceed</p>
-          <button
-            disabled={!gamestate.correctAnswer}
-            onClick={() => wonLevel(gamestate.currentLevel)}
-          >
-            correctAnswer
-          </button>
+        <div style={{ height: "100px", display: "flex" }}>
+          <div style={{ flex: 1 }}>
+            Current Level: {gamestate.currentLevel}
+          </div>
+          <div style={{ flex: 1 }}>
+            Completed Levels: {JSON.stringify(gamestate.completedLevels)}
+          </div>
+          <div style={{ flex: 1 }}>
+            <button
+              disabled={!gamestate.correctAnswer}
+              onClick={() => wonLevel(gamestate.currentLevel)}
+            >
+              {gamestate.correctAnswer
+                ? "Success! Click to Proceed"
+                : "Please solve before proceeding"}
+            </button>
+          </div>
         </div>
       </div>
     );

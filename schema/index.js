@@ -16,11 +16,11 @@ const { Book, BookType, AllBooksResolver, BookResolver } = require("./Book");
 const Query = `
   type Query {
     allHouses(Name: String): [House]
-    House(Id: Int): House
+    House(Id: Int!): House
     allCharacters(Name: String): [Character]
-    Character(Id: Int): Character
+    Character(Id: Int!): Character
     allBooks(Name: String): [Book]
-    Book(Id: Int): Book
+    Book(Id: Int!): Book
     Hodor: String
   }
 `;
