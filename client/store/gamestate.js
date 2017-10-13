@@ -32,8 +32,7 @@ export const correctAnswer = () => ({ type: CORRECT_ANSWER });
 export default function(state = defaultLevelData, action) {
   switch (action.type) {
     case WON_LEVEL:
-      const newlevel =
-        action.level >= game.length - 1 ? game.length - 1 : action.level + 1;
+      const newlevel = Math.min(game.length - 1, action.level + 1);
       return {
         currentLevel: newlevel,
         completedLevels: state.completedLevels.concat(action.level),

@@ -1,13 +1,26 @@
 const { makeExecutableSchema } = require("graphql-tools");
-const { Character, CharacterResolver } = require("./Character");
-const { House, HouseResolver } = require("./House");
-const { Book, BookResolver } = require("./Book");
+const {
+  Character,
+  CharacterType,
+  CharacterResolver,
+  AllCharactersResolver
+} = require("./Character");
+const {
+  House,
+  HouseType,
+  AllHousesResolver,
+  HouseResolver
+} = require("./House");
+const { BookType, AllBooksResolver, BookResolver } = require("./Book");
 
 const Query = `
   type Query {
-    allHouses: [House]
-    allCharacters: [Character]
-    allBooks: [Book]
+    allHouses(Name: String): [House]
+    House(Id: Int): House
+    allCharacters(Name: String): [Character]
+    Character(Id: Int): Character
+    allBooks(Name: String): [Book]
+    Book(Id: Int): Book
     Hodor: String
   }
 `;
@@ -18,37 +31,21 @@ const SchemaDefinition = `
 `;
 
 // Define your types here.
-const typeDefs = [SchemaDefinition, Query, Character, Book, House];
+const typeDefs = [SchemaDefinition, Query, CharacterType, BookType, HouseType];
 
 const resolvers = {
   Query: {
-    allHouses: HouseResolver,
-    allBooks: BookResolver,
-    allCharacters: CharacterResolver,
+    allHouses: AllHousesResolver,
+    House: HouseResolver,
+    allBooks: AllBooksResolver,
+    Book: BookResolver,
+    allCharacters: AllCharactersResolver,
+    Character: CharacterResolver,
     Hodor: () => "Hodor"
-  }
+  },
+  House,
+  Character
 };
 
 // Generate the schema object from your types definition.
 module.exports = makeExecutableSchema({ typeDefs, resolvers });
-
-//   `
-//   type Link {
-//     id: ID!
-//     url: String!
-//     description: String!
-//   }
-// `
-// const links = [
-//   {
-//     id: 1,
-//     url: "http://graphql.org/",
-//     description: "The Best Query Language"
-//   },
-//   {
-//     id: 2,
-//     url: "http://dev.apollodata.com",
-//     description: "Awesome GraphQL Client"
-//   }
-// ];
-// allLinks: () => links, // resolver

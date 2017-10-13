@@ -57,7 +57,7 @@ export default class CustomGraphiQL extends React.Component {
         }}
         {...this.state}
       >
-        <GraphiQL.Logo>Custom Logo</GraphiQL.Logo>
+        <GraphiQL.Logo>GraphQL of Thrones</GraphiQL.Logo>
         <GraphiQL.Toolbar>
           <GraphiQL.Button
             onClick={this.handleClickPrettifyButton}

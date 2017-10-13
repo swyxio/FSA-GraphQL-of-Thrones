@@ -1,10 +1,41 @@
+const { find, filter } = require("lodash");
 const charactersdata = require("./characters.json");
 
-const CharacterResolver = () => charactersdata;
+// const AllCharactersResolver = () => charactersdata;
+const AllCharactersResolver = (_, { Name }) => {
+  if (Name)
+    return filter(charactersdata, char =>
+      caseinsensitiveIncludes(char.Name, Name)
+    );
+  return charactersdata;
+};
 
-const Character = `
+const caseinsensitiveIncludes = (bigstring, substring) =>
+  bigstring.toLowerCase().includes(substring.toLowerCase());
+// http://dev.apollodata.com/tools/graphql-tools/resolvers.html
+
+const CharacterResolver = (obj, { Id }) => {
+  if (Id) return find(charactersdata, { Id: Id });
+  return;
+};
+
+// resolve inbound from others
+const Character = {
+  // House: (house, arg) => {
+  //   return charactersdata[house.Founder - 1];
+  // },
+  Spouse: char => find(charactersdata, { Id: char.Spouse }),
+  Father: char => find(charactersdata, { Id: char.Father }),
+  Mother: char => find(charactersdata, { Id: char.Mother }),
+  Children: char =>
+    filter(charactersdata, potentialchild =>
+      char.Children.includes(potentialchild.Id)
+    )
+};
+
+const CharacterType = `
   type Character {
-    Id: ID!
+    Id: ID
     Name: String
     IsFemale: Boolean
     Culture: String
@@ -12,10 +43,10 @@ const Character = `
     Aliases: [String]
     Born: String
     Died: String
-    Father: String
-    Mother: String
-    Spouse: String
-    Children: [String]
+    Father: Character
+    Mother: Character
+    Spouse: Character
+    Children: [Character]
     Allegiances: [String]
     Books: [Int]
     PovBooks: [String]
@@ -23,4 +54,9 @@ const Character = `
     TvSeries: [String]
   }
 `;
-module.exports = { Character, CharacterResolver };
+module.exports = {
+  Character,
+  CharacterType,
+  CharacterResolver,
+  AllCharactersResolver
+};

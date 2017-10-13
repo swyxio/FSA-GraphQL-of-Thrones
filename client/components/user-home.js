@@ -48,7 +48,7 @@ class UserHome extends React.Component {
           <p>
             {gamestate.levelInfo.text}
           </p>
-          {JSON.stringify(gamestate)}
+          {/*JSON.stringify(gamestate)*/}
         </div>
         <CustomGraphiQL
           fetcher={graphQLFetcher(
