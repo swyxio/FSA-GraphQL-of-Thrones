@@ -29,8 +29,8 @@ const Main = props => {
   //       </div>}
   // </nav>
   return (
-    <div>
-      <h1>GraphQL of Thrones</h1>
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      <h1 style={{ display: "inline" }}>GraphQL of Thrones</h1>
       <em>
         What if the Song of Ice and Fire was told in the most revolutionary
         database query language ever?

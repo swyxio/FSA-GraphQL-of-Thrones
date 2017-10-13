@@ -1,5 +1,6 @@
 import React from "react";
 import GraphiQL from "graphiql";
+// import schema from "../../schema";
 
 export default class CustomGraphiQL extends React.Component {
   constructor(props) {
@@ -11,14 +12,14 @@ export default class CustomGraphiQL extends React.Component {
 
       // OPTIONAL PARAMETERS
       // GraphQL artifacts
-      query: "",
+      query: "{\n   #write your query here\n}",
       variables: "",
       response: "",
 
       // GraphQL Schema
       // If `undefined` is provided, an introspection query is executed
       // using the fetcher.
-      schema: undefined,
+      schema: undefined, //schema, //undefined,
 
       // Useful to determine which operation to run
       // when there are multiple of them.
@@ -71,10 +72,12 @@ export default class CustomGraphiQL extends React.Component {
           </GraphiQL.Menu>
           {/*<OtherReactComponent someProps="true" />*/}
         </GraphiQL.Toolbar>
+        {/*
         <GraphiQL.Footer>
-          // Footer works the same as Toolbar // add items by appending child
-          components
+          // Footer works the same as Toolbar 
+          // add items by appending child components
         </GraphiQL.Footer>
+          */}
       </GraphiQL>
     );
   }

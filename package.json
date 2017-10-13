@@ -30,6 +30,7 @@
     "graphql": "^0.11.7",
     "graphql-tools": "^2.4.0",
     "history": "^4.6.3",
+    "lodash": "^4.17.4",
     "morgan": "^1.8.1",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
