@@ -20,10 +20,10 @@ const HouseResolver = (_, { Id }) => {
 
 // resolve inbound from others
 const House = {
-  Founder: (house, arg) => find(charactersdata, { Id: house.Founder }),
-  CurrentLord: (house, arg) => find(charactersdata, { Id: house.CurrentLord }),
-  Heir: (house, arg) => find(charactersdata, { Id: house.Heir }),
-  Overlord: (house, arg) => find(charactersdata, { Id: house.Overlord })
+  Founder: house => find(charactersdata, { Id: house.Founder }),
+  CurrentLord: house => find(charactersdata, { Id: house.CurrentLord }),
+  Heir: house => find(charactersdata, { Id: house.Heir }),
+  Overlord: house => find(charactersdata, { Id: house.Overlord })
 };
 const HouseType = `
   type House {

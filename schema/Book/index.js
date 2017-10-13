@@ -1,3 +1,4 @@
+const { find, filter } = require("lodash");
 const booksdata = require("./books.json");
 
 // const AllBooksResolver = () => booksdata;
@@ -11,14 +12,15 @@ const caseinsensitiveIncludes = (bigstring, substring) =>
   bigstring.toLowerCase().includes(substring.toLowerCase());
 
 const BookResolver = (_, { Id }) => {
-  if (Id) return booksdata[Id - 1];
+  if (Id) return find(booksdata, { Id: Id });
   return;
 };
 
 // resolve inbound from others
-// const Book = {
-//   House: (house) =>
-// }
+const Book = {
+  PrecededById: book => find(booksdata, { Id: book.PrecededById }),
+  FollowedBy: book => find(booksdata, { Id: book.FollowedBy })
+};
 
 const BookType = `
   type Book {
@@ -31,9 +33,9 @@ const BookType = `
     MediaType: String
     Country: String
     ReleaseDate: String
-    PrecededById: Int
-    FollowedBy: Int
+    PrecededById: Book
+    FollowedBy: Book
   }
 `;
 
-module.exports = { BookType, AllBooksResolver, BookResolver };
+module.exports = { Book, BookType, AllBooksResolver, BookResolver };

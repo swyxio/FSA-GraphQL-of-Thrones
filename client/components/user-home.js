@@ -7,10 +7,8 @@ import { wonLevel, resetLevels, gotoLevel, correctAnswer } from "../store";
 import _ from "lodash";
 
 const checkIfCorrectAnswer = (response, answer) => Object.keys(answer).every();
-const graphQLFetcher = (
-  handleCorrectAnswer,
-  correctAnswer
-) => graphQLParams => {
+let localcurrentanswer = {};
+const graphQLFetcher = handleCorrectAnswer => graphQLParams => {
   // console.log("graphQLParams", graphQLParams);
   return fetch(window.location.origin + "/graphql", {
     method: "post",
@@ -20,9 +18,9 @@ const graphQLFetcher = (
     .then(response => response.json())
     .then(x => {
       console.log("response", x.data);
-      console.log("correctAnswer", correctAnswer);
+      console.log("correctAnswer", localcurrentanswer);
       console.log("handleCorrectAnswer", handleCorrectAnswer);
-      if (_.isEqual(correctAnswer, x.data)) {
+      if (_.isEqual(localcurrentanswer, x.data)) {
         console.log("****_.isEqual(correctAnswer, x.data)");
         handleCorrectAnswer();
       }
@@ -35,6 +33,7 @@ const graphQLFetcher = (
 class UserHome extends React.Component {
   render() {
     const { gamestate, handleCorrectAnswer, wonLevel } = this.props;
+    localcurrentanswer = gamestate.levelInfo.answer;
     return (
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
         <div style={{ flex: 1 }}>
@@ -50,12 +49,7 @@ class UserHome extends React.Component {
           </p>
           {/*JSON.stringify(gamestate)*/}
         </div>
-        <CustomGraphiQL
-          fetcher={graphQLFetcher(
-            handleCorrectAnswer,
-            gamestate.levelInfo.answer
-          )}
-        />
+        <CustomGraphiQL fetcher={graphQLFetcher(handleCorrectAnswer)} />
         <div style={{ height: "100px" }}>
           <p>click to proceed</p>
           <button

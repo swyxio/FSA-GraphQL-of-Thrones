@@ -11,7 +11,7 @@ const {
   AllHousesResolver,
   HouseResolver
 } = require("./House");
-const { BookType, AllBooksResolver, BookResolver } = require("./Book");
+const { Book, BookType, AllBooksResolver, BookResolver } = require("./Book");
 
 const Query = `
   type Query {
@@ -44,6 +44,7 @@ const resolvers = {
     Hodor: () => "Hodor"
   },
   House,
+  Book,
   Character
 };
 
