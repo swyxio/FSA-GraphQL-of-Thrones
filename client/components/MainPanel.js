@@ -61,7 +61,7 @@ class MainPanel extends React.Component {
           secondaryMinSize={10}
           secondaryInitialSize={33}
         >
-          <Accordion openNextAccordionItem style={accordionstyle}>
+          <Accordion allowMultiple activeItems={[0, 1]} style={accordionstyle}>
             <AccordionItem title={"🐉 Story"} slug={0} key={0} expanded>
               <StyledAccordionItemHeader>
                 {gamestate.levelInfo.title}
@@ -74,15 +74,22 @@ class MainPanel extends React.Component {
                       {Hodoreasteregg}
                     </code>
                   </pre>}
+                <hr />
+                If you need help, please see the Instructions below.
               </div>
             </AccordionItem>
-            <AccordionItem title={"👩‍🎓 Instructions"} slug={2} key={2}>
+            <AccordionItem
+              title={"👩‍🎓 Instructions"}
+              slug={2}
+              key={2}
+              expanded
+            >
               <StyledAccordionItemHeader>
                 {gamestate.levelInfo.realsubTitle}
               </StyledAccordionItemHeader>
-              <blockquote>
+              <div>
                 {md([gamestate.levelInfo.instructions])}
-              </blockquote>
+              </div>
             </AccordionItem>
             <AccordionItem title={"🤼 Community"} slug={3} key={3}>
               Steve Jobs agile affordances user story sticky note prototype
