@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import CustomGraphiQL from "./graphql";
 import fetch from "isomorphic-fetch";
 import { wonLevel, resetLevels, gotoLevel, correctAnswer } from "../store";
 import _ from "lodash";
+import Header from "./Header";
+import Footer from "./Footer";
+import MainPanel from "./MainPanel";
 
 const checkIfCorrectAnswer = (response, answer) => Object.keys(answer).every();
 let localcurrentanswer = {};
@@ -22,7 +24,7 @@ const graphQLFetcher = handleCorrectAnswer => graphQLParams => {
       console.log("handleCorrectAnswer", handleCorrectAnswer);
       if (_.isEqual(localcurrentanswer, x.data)) {
         console.log("****_.isEqual(correctAnswer, x.data)");
-        handleCorrectAnswer();
+        return handleCorrectAnswer(x);
       }
       return x;
     });
@@ -32,37 +34,18 @@ const graphQLFetcher = handleCorrectAnswer => graphQLParams => {
  */
 class UserHome extends React.Component {
   render() {
-    const { gamestate, handleCorrectAnswer, wonLevel } = this.props;
+    const {
+      gamestate,
+      handleCorrectAnswer,
+      wonLevel,
+      menuButtonClick
+    } = this.props;
     localcurrentanswer = gamestate.levelInfo.answer;
     return (
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        <div style={{ flex: 1 }}>
-          <h1>
-            Level {gamestate.currentLevel}: {gamestate.levelInfo.title}
-          </h1>
-          <blockquote>
-            {gamestate.levelInfo.text}
-          </blockquote>
-        </div>
-        <CustomGraphiQL fetcher={graphQLFetcher(handleCorrectAnswer)} />
-        <div style={{ height: "100px", display: "flex" }}>
-          <div style={{ flex: 1 }}>
-            Current Level: {gamestate.currentLevel}
-          </div>
-          <div style={{ flex: 1 }}>
-            Completed Levels: {JSON.stringify(gamestate.completedLevels)}
-          </div>
-          <div style={{ flex: 1 }}>
-            <button
-              disabled={!gamestate.correctAnswer}
-              onClick={() => wonLevel(gamestate.currentLevel)}
-            >
-              {gamestate.correctAnswer
-                ? "Success! Click to Proceed"
-                : "Please solve before proceeding"}
-            </button>
-          </div>
-        </div>
+        <Header />
+        <MainPanel graphQLFetcher={graphQLFetcher(handleCorrectAnswer)} />
+        <Footer menuButtonClick={menuButtonClick} />
       </div>
     );
   }
@@ -95,8 +78,9 @@ const mapDispatch = dispatch => {
       dispatch(gotoLevel(level));
     },
 
-    handleCorrectAnswer() {
+    handleCorrectAnswer(x) {
       dispatch(correctAnswer());
+      return x;
     }
   };
 };

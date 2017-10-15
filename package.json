@@ -26,7 +26,6 @@
     "connect-session-sequelize": "^4.1.0",
     "express": "^4.14.1",
     "express-session": "^1.15.1",
-    "graphiql": "^0.11.5",
     "graphql": "^0.11.7",
     "graphql-tools": "^2.4.0",
     "history": "^4.6.3",
@@ -42,11 +41,16 @@
     "react-redux": "^5.0.2",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
+    "react-sanfona": "^0.4.0",
+    "react-sidebar": "^2.3.2",
+    "react-splitter-layout": "^3.0.0",
     "redux": "^3.6.0",
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.2.0",
     "sequelize": "^4.3.1",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "styled-components": "^2.2.1",
+    "swyx-graphiql": "^0.11.5"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.9.0",

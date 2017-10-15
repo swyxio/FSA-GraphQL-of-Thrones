@@ -16,7 +16,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 450px;
+  height: 100%;
   margin: 0;
   overflow: hidden;
   width: 100%;

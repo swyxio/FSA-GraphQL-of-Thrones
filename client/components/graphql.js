@@ -1,5 +1,5 @@
 import React from "react";
-import GraphiQL from "graphiql";
+const GraphiQL = require("swyx-graphiql");
 // import schema from "../../schema";
 
 export default class CustomGraphiQL extends React.Component {
@@ -12,7 +12,7 @@ export default class CustomGraphiQL extends React.Component {
 
       // OPTIONAL PARAMETERS
       // GraphQL artifacts
-      query: "{\n    #write your query here\n    \n    \n}",
+      query: "{\n  #write your query here\n  \n  \n}",
       variables: "",
       response: "",
 
@@ -55,6 +55,7 @@ export default class CustomGraphiQL extends React.Component {
         ref={c => {
           this.graphiql = c;
         }}
+        editorTheme="solarized light"
         {...this.state}
       >
         <GraphiQL.Logo>GraphQL of Thrones</GraphiQL.Logo>

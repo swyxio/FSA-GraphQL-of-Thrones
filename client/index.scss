@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-
+  background: #152b39;
   a {
     text-decoration: none;
   }
@@ -19,3 +19,102 @@ body {
     display: inline-block;
   }
 }
+
+.react-sanfona-item-body-wrapper {
+  background-color: #fff;
+  padding: 20px;
+}
+
+#SPAN_5 {
+  bottom: 0px;
+  box-sizing: border-box;
+  color: rgb(32, 64, 86);
+  content: '""';
+  cursor: pointer;
+  display: block;
+  height: 1px;
+  left: 0px;
+  min-height: auto;
+  min-width: auto;
+  pointer-events: none;
+  position: relative;
+  right: 0px;
+  text-decoration: none solid rgb(32, 64, 86);
+  top: 0px;
+  width: 18px;
+  word-break: break-word;
+  column-rule-color: rgb(32, 64, 86);
+  perspective-origin: 9px 0.5px;
+  transform-origin: 9px 0.5px;
+  caret-color: rgb(32, 64, 86);
+  background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  border: 0px none rgb(32, 64, 86);
+  border-radius: 1px 1px 1px 1px;
+  font: normal normal 300 normal 16px / normal Oxygen, Oxygen, "Segoe UI",
+    "Helvetica Neue", sans-serif;
+  outline: rgb(32, 64, 86) none 0px;
+  transition: all 0.15s ease-in 0s;
+} /*#SPAN_5*/
+
+#SPAN_5:after {
+  bottom: 0px;
+  box-sizing: border-box;
+  color: rgb(32, 64, 86);
+  content: '""';
+  cursor: pointer;
+  display: block;
+  height: 1px;
+  left: 0px;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+  text-decoration: none solid rgb(32, 64, 86);
+  top: 0px;
+  width: 18px;
+  word-break: break-word;
+  column-rule-color: rgb(32, 64, 86);
+  perspective-origin: 9px 0.5px;
+  transform: matrix(1, 0, 0, 1, 0, -5);
+  transform-origin: 9px 0.5px;
+  caret-color: rgb(32, 64, 86);
+  background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  border: 0px none rgb(32, 64, 86);
+  border-radius: 1px 1px 1px 1px;
+  font: normal normal 300 normal 16px / normal Oxygen, Oxygen, "Segoe UI",
+    "Helvetica Neue", sans-serif;
+  outline: rgb(32, 64, 86) none 0px;
+  transition: all 0.15s ease-in 0s;
+} /*#SPAN_5:after*/
+
+#SPAN_5:before {
+  bottom: 0px;
+  box-sizing: border-box;
+  color: rgb(32, 64, 86);
+  content: '""';
+  cursor: pointer;
+  display: block;
+  height: 1px;
+  left: 0px;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+  text-decoration: none solid rgb(32, 64, 86);
+  top: 0px;
+  width: 18px;
+  word-break: break-word;
+  column-rule-color: rgb(32, 64, 86);
+  perspective-origin: 9px 0.5px;
+  transform: matrix(1, 0, 0, 1, 0, 5);
+  transform-origin: 9px 0.5px;
+  caret-color: rgb(32, 64, 86);
+  background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  border: 0px none rgb(32, 64, 86);
+  border-radius: 1px 1px 1px 1px;
+  font: normal normal 300 normal 16px / normal Oxygen, Oxygen, "Segoe UI",
+    "Helvetica Neue", sans-serif;
+  outline: rgb(32, 64, 86) none 0px;
+  transition: all 0.15s ease-in 0s;
+} /*#SPAN_5:before*/
