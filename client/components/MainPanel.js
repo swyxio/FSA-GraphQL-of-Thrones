@@ -5,6 +5,7 @@ import CustomGraphiQL from "./graphql";
 import SplitterLayout from "react-splitter-layout";
 import styled from "styled-components";
 import fetch from "isomorphic-fetch";
+import md from "react-markings";
 import { correctAnswer } from "../store";
 const checkIfCorrectAnswer = (response, answer) => Object.keys(answer).every();
 
@@ -29,6 +30,19 @@ const graphQLFetcher = handleCorrectAnswer => graphQLParams => {
 };
 
 let localcurrentanswer = {};
+const Hodoreasteregg = `
+
+{
+  Hodor
+}
+
+
+`;
+const Hodoreastereggstyle = {
+  background: "#152b39",
+  color: "white",
+  paddingLeft: "50px"
+};
 class MainPanel extends React.Component {
   // https://github.com/daviferreira/react-sanfona
   render() {
@@ -44,7 +58,7 @@ class MainPanel extends React.Component {
           primaryIndex={1}
           percentage
           primaryMinSize={20}
-          secondaryMinSize={40}
+          secondaryMinSize={10}
           secondaryInitialSize={33}
         >
           <Accordion openNextAccordionItem style={accordionstyle}>
@@ -53,29 +67,21 @@ class MainPanel extends React.Component {
                 {gamestate.levelInfo.title}
               </StyledAccordionItemHeader>
               <div>
-                {gamestate.levelInfo.text}
+                {md([gamestate.levelInfo.story])}
+                {gamestate.currentLevel === 0 &&
+                  <pre style={Hodoreastereggstyle}>
+                    <code>
+                      {Hodoreasteregg}
+                    </code>
+                  </pre>}
               </div>
             </AccordionItem>
-            <AccordionItem title={"👩‍🎓 Learn"} slug={2} key={2}>
-              <h1>
-                Level {gamestate.currentLevel}:
-              </h1>
+            <AccordionItem title={"👩‍🎓 Instructions"} slug={2} key={2}>
+              <StyledAccordionItemHeader>
+                {gamestate.levelInfo.realsubTitle}
+              </StyledAccordionItemHeader>
               <blockquote>
-                Even though large tracts of Europe and many old and famous
-                States have fallen or may fall into the grip of the Gestapo and
-                all the odious apparatus of Nazi rule, we shall not flag or
-                fail. We shall go on to the end. We shall fight in France, we
-                shall fight on the seas and oceans, we shall fight with growing
-                confidence and growing strength in the air, we shall defend our
-                island, whatever the cost may be. We shall fight on the beaches,
-                we shall fight on the landing grounds, we shall fight in the
-                fields and in the streets, we shall fight in the hills; we shall
-                never surrender, and if, which I do not for a moment believe,
-                this island or a large part of it were subjugated and starving,
-                then our Empire beyond the seas, armed and guarded by the
-                British Fleet, would carry on the struggle, until, in God's good
-                time, the New World, with all its power and might, steps forth
-                to the rescue and the liberation of the old.
+                {md([gamestate.levelInfo.instructions])}
               </blockquote>
             </AccordionItem>
             <AccordionItem title={"🤼 Community"} slug={3} key={3}>
