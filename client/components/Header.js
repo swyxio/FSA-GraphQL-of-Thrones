@@ -6,19 +6,6 @@ class Header extends React.Component {
     const StyledSection2 = StyledSection.extend`justify-content: center;`;
     const StyledSection3 = StyledSection.extend`justify-content: flex-end;`;
 
-    // <div id="DIV_11">
-    //   <span id="SPAN_14">Connected to Codecademy</span>
-    // </div>
-    // <div id="DIV_16">
-    //   <div id="DIV_17">hi</div>
-    // </div>
-    // <div id="DIV_22">
-    //   <div id="DIV_23">
-    //     <button id="BUTTON_24" />
-    //     <div id="DIV_25">potato</div>
-    //     hi3
-    //   </div>
-    // </div>
     return (
       <StyledHeader>
         <StyledNav>

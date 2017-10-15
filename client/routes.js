@@ -49,24 +49,6 @@ class Routes extends Component {
   render() {
     const { isLoggedIn } = this.props;
 
-    // <Switch>
-    //   {/* Routes placed here are available to all visitors */}
-    //   <Route path='/login' component={Login} />
-    //   <Route path='/signup' component={Signup} />
-    // </Switch>
-    // {
-    //   isLoggedIn &&
-    //     <Switch>
-    //       {/* Routes placed here are only available after logging in */}
-    //       <Route path='/home' component={UserHome} />
-    //     </Switch>
-    // }
-    // {/* Displays our Login component as a fallback */}
-    // <Route component={Login} />
-
-    //
-    // <Route path="/home" component={UserHome} />
-
     var sidebarContent = <SidebarContent />;
     const sidebarProps = {
       sidebar: sidebarContent,
@@ -95,6 +77,24 @@ class Routes extends Component {
     );
   }
 }
+
+// <Switch>
+//   {/* Routes placed here are available to all visitors */}
+//   <Route path='/login' component={Login} />
+//   <Route path='/signup' component={Signup} />
+// </Switch>
+// {
+//   isLoggedIn &&
+//     <Switch>
+//       {/* Routes placed here are only available after logging in */}
+//       <Route path='/home' component={UserHome} />
+//     </Switch>
+// }
+// {/* Displays our Login component as a fallback */}
+// <Route component={Login} />
+
+//
+// <Route path="/home" component={UserHome} />
 
 /**
  * CONTAINER

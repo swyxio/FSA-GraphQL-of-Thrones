@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
 // import { wonLevel, resetLevels, gotoLevel, correctAnswer } from "../store";
 import _ from "lodash";
@@ -23,45 +22,3 @@ class UserHome extends React.Component {
 }
 
 export default UserHome;
-// /**
-//  * CONTAINER
-//  */
-// const mapState = state => {
-//   return {
-//     gamestate: state.gamestate
-//   };
-// };
-// /**
-//  * CONTAINER
-//  */
-// const mapDispatch = dispatch => {
-//   return {
-//     wonLevel(level) {
-//       dispatch(wonLevel(level));
-//     },
-
-//     resetLevels(e) {
-//       e.preventDefault();
-//       dispatch(resetLevels());
-//     },
-
-//     gotoLevel(e, level) {
-//       e.preventDefault();
-//       dispatch(gotoLevel(level));
-//     },
-
-//     handleCorrectAnswer(x) {
-//       dispatch(correctAnswer());
-//       return x;
-//     }
-//   };
-// };
-
-// export default connect(mapState, mapDispatch)(UserHome);
-
-/**
- * PROP TYPES
- */
-UserHome.propTypes = {
-  email: PropTypes.string
-};

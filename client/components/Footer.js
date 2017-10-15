@@ -52,25 +52,6 @@ class Footer extends React.Component {
   }
 }
 
-// <div style={{ height: "100px", display: "flex" }}>
-//   <div style={{ flex: 1 }}>
-//     Current Level: {gamestate.currentLevel}
-//   </div>
-//   <div style={{ flex: 1 }}>
-//     Completed Levels: {JSON.stringify(gamestate.completedLevels)}
-//   </div>
-//   <div style={{ flex: 1 }}>
-//     <button
-//       disabled={!gamestate.correctAnswer}
-//       onClick={() => wonLevel(gamestate.currentLevel)}
-//     >
-//       {gamestate.correctAnswer
-//         ? "Success! Click to Proceed"
-//         : "Please solve before proceeding"}
-//     </button>
-//   </div>
-// </div>
-
 const Button10 = styled.button`
   color: rgb(255, 255, 255);
   cursor: pointer;
