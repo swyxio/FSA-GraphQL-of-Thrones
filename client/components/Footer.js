@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { connect } from "react-redux";
+import { wonLevel, resetLevels, gotoLevel, correctAnswer } from "../store";
 
 class Footer extends React.Component {
   render() {
@@ -9,20 +11,37 @@ class Footer extends React.Component {
       flex: 2 1 0%;
     `;
     const StyledSection3 = StyledSection.extend`justify-content: flex-end;`;
-    // <span id="SPAN_5" />
+    const {
+      handleCorrectAnswer,
+      wonLevel,
+      menuButtonClick,
+      gamestate
+    } = this.props;
+    const { totalLevels, currentLevel } = gamestate;
     return (
       <StyledNav>
         <StyledSection1>
           <BurgerDiv>
             <TheBody onClick={this.props.menuButtonClick} title="8. The Body">
-              <Span6>8. The Body</Span6>
+              <span id="SPAN_5" />
+              <Span6> Menu </Span6>
             </TheBody>
           </BurgerDiv>
         </StyledSection1>
         <StyledSection2>
           <Button10>Back</Button10>
-          <div id="DIV_11">8/14</div>
-          <Button10>Next</Button10>
+          <div id="DIV_11">
+            {currentLevel}/{totalLevels}
+          </div>
+
+          {gamestate.correctAnswer
+            ? <Button10
+                disabled={!gamestate.correctAnswer}
+                onClick={() => wonLevel(currentLevel)}
+              >
+                Next
+              </Button10>
+            : <div />}
         </StyledSection2>
         <StyledSection3>
           <button id="BUTTON_14" />
@@ -203,4 +222,38 @@ const StyledSection = styled.section`
   outline: rgb(255, 255, 255) none 0px;
 `;
 
-export default Footer;
+/**
+ * CONTAINER
+ */
+const mapState = state => {
+  return {
+    gamestate: state.gamestate
+  };
+};
+/**
+ * CONTAINER
+ */
+const mapDispatch = dispatch => {
+  return {
+    wonLevel(level) {
+      dispatch(wonLevel(level));
+    },
+
+    resetLevels(e) {
+      e.preventDefault();
+      dispatch(resetLevels());
+    },
+
+    gotoLevel(e, level) {
+      e.preventDefault();
+      dispatch(gotoLevel(level));
+    },
+
+    handleCorrectAnswer(x) {
+      dispatch(correctAnswer());
+      return x;
+    }
+  };
+};
+
+export default connect(mapState, mapDispatch)(Footer);

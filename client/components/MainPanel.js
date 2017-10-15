@@ -4,15 +4,40 @@ import { Accordion, AccordionItem } from "react-sanfona";
 import CustomGraphiQL from "./graphql";
 import SplitterLayout from "react-splitter-layout";
 import styled from "styled-components";
+import fetch from "isomorphic-fetch";
+import { correctAnswer } from "../store";
+const checkIfCorrectAnswer = (response, answer) => Object.keys(answer).every();
 
+const graphQLFetcher = handleCorrectAnswer => graphQLParams => {
+  // console.log("graphQLParams", graphQLParams);
+  return fetch(window.location.origin + "/graphql", {
+    method: "post",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(graphQLParams)
+  })
+    .then(response => response.json())
+    .then(x => {
+      console.log("response", x.data);
+      console.log("correctAnswer", localcurrentanswer);
+      console.log("handleCorrectAnswer", handleCorrectAnswer);
+      if (_.isEqual(localcurrentanswer, x.data)) {
+        console.log("****_.isEqual(correctAnswer, x.data)");
+        return handleCorrectAnswer(x);
+      }
+      return x;
+    });
+};
+
+let localcurrentanswer = {};
 class MainPanel extends React.Component {
   // https://github.com/daviferreira/react-sanfona
   render() {
-    const { gamestate, graphQLFetcher } = this.props;
+    const { gamestate, handleCorrectAnswer } = this.props;
     const accordionstyle = {
       background: "#d4d5d6",
       color: "rgb(32, 64, 86)"
     };
+    localcurrentanswer = gamestate.levelInfo.answer;
     return (
       <div style={{ flex: 1, display: "flex" }}>
         <SplitterLayout
@@ -76,7 +101,7 @@ class MainPanel extends React.Component {
               shadow actionable insight bootstrapping.
             </AccordionItem>
           </Accordion>
-          <CustomGraphiQL fetcher={graphQLFetcher} />
+          <CustomGraphiQL fetcher={graphQLFetcher(handleCorrectAnswer)} />
         </SplitterLayout>
       </div>
     );
@@ -95,7 +120,12 @@ const mapState = state => {
  * CONTAINER
  */
 const mapDispatch = dispatch => {
-  return {};
+  return {
+    handleCorrectAnswer(x) {
+      dispatch(correctAnswer());
+      return x;
+    }
+  };
 };
 
 export default connect(mapState, mapDispatch)(MainPanel);

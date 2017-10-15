@@ -15,7 +15,8 @@ const defaultLevelData = {
   currentLevel: 0,
   completedLevels: [],
   levelInfo: game[0],
-  correctAnswer: false
+  correctAnswer: false,
+  totalLevels: game.length - 1
 };
 
 /**
@@ -37,7 +38,8 @@ export default function(state = defaultLevelData, action) {
         currentLevel: newlevel,
         completedLevels: state.completedLevels.concat(action.level),
         levelInfo: game[newlevel],
-        correctAnswer: false
+        correctAnswer: false,
+        totalLevels: game.length - 1
       };
     case RESET_LEVELS:
       return Object.assign({}, state, {

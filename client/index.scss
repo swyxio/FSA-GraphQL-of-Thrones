@@ -24,6 +24,12 @@ body {
   background-color: #fff;
   padding: 20px;
 }
+.splitter-layout {
+  position: static;
+}
+.custom-sidebar-class {
+  z-index: 99;
+}
 
 #SPAN_5 {
   bottom: 0px;

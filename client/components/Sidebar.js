@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import gamedata from "../game";
 
 const styles = {
   sidebar: {
@@ -23,35 +25,48 @@ const styles = {
   }
 };
 
-const SidebarContent = props => {
-  const style = props.style
-    ? { ...styles.sidebar, ...props.style }
-    : styles.sidebar;
+class SidebarContent extends React.Component {
+  render() {
+    const style = this.props.style
+      ? { ...styles.sidebar, ...props.style }
+      : styles.sidebar;
 
-  const links = [];
-
-  for (let ind = 0; ind < 10; ind++) {
-    links.push(
-      <a key={ind} href="#" style={styles.sidebarLink}>
-        Mock menu item {ind}
+    const links = gamedata.map((singlegame, ind) =>
+      <a key={ind} style={styles.sidebarLink}>
+        {ind}. {singlegame.title}
       </a>
     );
-  }
 
-  return (
-    <div title="Menu" style={style}>
-      <div style={styles.content}>
-        <a href="index.html" style={styles.sidebarLink}>
-          Home
-        </a>
-        <a href="responsive_example.html" style={styles.sidebarLink}>
-          Responsive Example
-        </a>
-        <div style={styles.divider} />
-        {links}
+    return (
+      <div title="Menu" style={style}>
+        <div style={styles.content}>
+          <a href="index.html" style={styles.sidebarLink}>
+            Home
+          </a>
+          <a href="responsive_example.html" style={styles.sidebarLink}>
+            Responsive Example
+          </a>
+          <div style={styles.divider} />
+          {links}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+}
+
+/**
+ * CONTAINER
+ */
+const mapState = state => {
+  return {
+    gamestate: state.gamestate
+  };
+};
+/**
+ * CONTAINER
+ */
+const mapDispatch = dispatch => {
+  return {};
 };
 
-export default SidebarContent;
+export default connect(mapState, mapDispatch)(SidebarContent);
