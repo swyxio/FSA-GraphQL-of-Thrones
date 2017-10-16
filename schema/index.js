@@ -19,6 +19,15 @@ const {
   InteractionCharacterResolver,
   InteractionResolver
 } = require("./asoiaf-interactions");
+const {
+  TVEpisodeLocationType,
+  AllTVEpisodesResolver,
+  TVEpisodeResolver,
+  AllTVLocationsResolver,
+  TVLocationResolver,
+  TVEpisode,
+  TVLocation
+} = require("./neo4j");
 const { Book, BookType, AllBooksResolver, BookResolver } = require("./Book");
 
 const Query = `
@@ -33,6 +42,10 @@ const Query = `
     allInteractionCharacters(Name: String): [InteractionCharacter]
     InteractionCharacter(Id: String!): InteractionCharacter
     Interaction: Interaction
+    allTVEpisodes(Name: String): [TVEpisode]
+    TVEpisode: TVEpisode
+    allTVLocations(Name: String): [TVLocation]
+    TVLocation: TVLocation
     Hodor: String
   }
 `;
@@ -49,7 +62,8 @@ const typeDefs = [
   CharacterType,
   BookType,
   HouseType,
-  InteractionType
+  InteractionType,
+  TVEpisodeLocationType
 ];
 
 const resolvers = {
@@ -63,13 +77,19 @@ const resolvers = {
     allInteractionCharacters: AllInteractionCharactersResolver,
     InteractionCharacter: InteractionCharacterResolver,
     Interaction: InteractionResolver,
+    allTVEpisodes: AllTVEpisodesResolver,
+    TVEpisode: TVEpisode,
+    allTVLocations: AllTVLocationsResolver,
+    TVLocation: TVLocation,
     Hodor: () => "Hodor"
   },
   House,
   Book,
   Character,
   InteractionCharacter,
-  Interaction
+  Interaction,
+  TVEpisode,
+  TVLocation
 };
 
 // Generate the schema object from your types definition.
