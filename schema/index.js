@@ -26,7 +26,11 @@ const {
   AllTVLocationsResolver,
   TVLocationResolver,
   TVEpisode,
-  TVLocation
+  TVLocation,
+  TVBetrayal,
+  TVBetrayalType,
+  AllTVBetrayalsResolver,
+  TVBetrayalResolver
 } = require("./neo4j");
 const { Book, BookType, AllBooksResolver, BookResolver } = require("./Book");
 
@@ -42,10 +46,12 @@ const Query = `
     allInteractionCharacters(Name: String): [InteractionCharacter]
     InteractionCharacter(Id: String!): InteractionCharacter
     Interaction: Interaction
-    allTVEpisodes(Name: String): [TVEpisode]
+    allTVEpisodes(Title: String): [TVEpisode]
     TVEpisode: TVEpisode
     allTVLocations(Name: String): [TVLocation]
     TVLocation: TVLocation
+    allTVBetrayals(Betrayal: String, Perpetrator: String, Victim: String): [TVBetrayal]
+    TVBetrayal: TVBetrayal
     Hodor: String
   }
 `;
@@ -63,7 +69,8 @@ const typeDefs = [
   BookType,
   HouseType,
   InteractionType,
-  TVEpisodeLocationType
+  TVEpisodeLocationType,
+  TVBetrayalType
 ];
 
 const resolvers = {
@@ -81,6 +88,8 @@ const resolvers = {
     TVEpisode: TVEpisode,
     allTVLocations: AllTVLocationsResolver,
     TVLocation: TVLocation,
+    allTVBetrayals: AllTVBetrayalsResolver,
+    TVBetrayal: TVBetrayal,
     Hodor: () => "Hodor"
   },
   House,
@@ -89,7 +98,8 @@ const resolvers = {
   InteractionCharacter,
   Interaction,
   TVEpisode,
-  TVLocation
+  TVLocation,
+  TVBetrayal
 };
 
 // Generate the schema object from your types definition.
