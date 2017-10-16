@@ -46,13 +46,18 @@ class SidebarContent extends React.Component {
       <div title="Menu" style={style}>
         <div style={styles.content}>
           <a href="index.html" style={styles.sidebarLink}>
-            Home
-          </a>
-          <a href="responsive_example.html" style={styles.sidebarLink}>
-            Responsive Example
+            🏠 Home
           </a>
           <div style={styles.divider} />
           {links}
+          <div style={styles.divider} />
+          <a
+            href="https://github.com/sw-yx/FSA-GraphQL-of-Thrones"
+            target="_blank"
+            style={styles.sidebarLink}
+          >
+            😸 Contribute on Github
+          </a>
         </div>
       </div>
     );

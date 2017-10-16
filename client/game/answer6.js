@@ -32,9 +32,10 @@ module.exports = {
     custvariables: `{
   "requestedName": "Game",
   "skipReleaseDate": true,
-  "showISBN": false
+  "showISBN": true
 }`,
     custquery: `
+# try running this example
 query ($requestedName: String, $skipReleaseDate: Boolean!) {
   allBooks(Name: $requestedName) {
     ReleaseDate @skip(if: $skipReleaseDate)

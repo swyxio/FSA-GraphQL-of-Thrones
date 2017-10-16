@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Modal from "react-modal";
 import { openModal, closeModal } from "../store";
 import md from "react-markings";
+import TweetButton from "./TweetButton";
 
 class MyModal extends React.Component {
   render() {
@@ -47,6 +48,7 @@ class MyModal extends React.Component {
                 ? showVictory
                 : md([gamestate.levelInfo.story])}
             </div>
+            <TweetButton />
           </div>
           <div>
             <button onClick={closeModal} className="modal__button">

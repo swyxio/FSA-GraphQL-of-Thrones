@@ -62,7 +62,7 @@ export default class CustomGraphiQL extends React.Component {
         ref={c => {
           this.graphiql = c;
         }}
-        editorTheme="solarized light"
+        editorTheme="solarized dark"
         query={
           custquery || "query MyQuery {\n  #write your query here\n  \n  \n}"
         }

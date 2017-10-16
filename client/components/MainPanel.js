@@ -98,7 +98,11 @@ class MainPanel extends React.Component {
             <AccordionItem title={"🐛 Report a Bug"} slug={4} key={4}>
               <div>
                 We have yet to build out good bug reporting. In the meantime,
-                please just yell at
+                please file an issue at
+                <a href="https://github.com/sw-yx/FSA-GraphQL-of-Thrones/issues">
+                  our Github page
+                </a>
+                or yell at
                 <a href="http://twitter.com/swyx">@swyx on Twitter</a>!
               </div>
             </AccordionItem>

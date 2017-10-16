@@ -4,7 +4,14 @@ import { Router } from "react-router";
 import { Route, Switch } from "react-router-dom";
 import PropTypes from "prop-types";
 import history from "./history";
-import { Main, Login, Signup, UserHome, SidebarContent } from "./components";
+import {
+  Main,
+  Login,
+  Signup,
+  UserHome,
+  SidebarContent,
+  WinScreen
+} from "./components";
 import { me } from "./store";
 import Sidebar from "react-sidebar";
 
@@ -65,14 +72,18 @@ class Routes extends Component {
     };
     return (
       <Router history={history}>
-        <Sidebar {...sidebarProps}>
-          <Main>
-            <Route
-              path="/"
-              render={() => <UserHome menuButtonClick={this.menuButtonClick} />}
-            />
-          </Main>
-        </Sidebar>
+        <Switch>
+          <Route path="/greatsuccess" component={WinScreen} />
+          <Route
+            path="/"
+            render={() =>
+              <Sidebar {...sidebarProps}>
+                <Main>
+                  <UserHome menuButtonClick={this.menuButtonClick} />
+                </Main>
+              </Sidebar>}
+          />
+        </Switch>
       </Router>
     );
   }
