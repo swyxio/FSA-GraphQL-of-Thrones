@@ -26,6 +26,7 @@ const House = {
   Overlord: house => find(charactersdata, { Id: house.Overlord })
 };
 const HouseType = `
+  # House data from API of Ice and Fire https://github.com/joakimskoog/AnApiOfIceAndFire
   type House {
     Id: ID!
     Name: String

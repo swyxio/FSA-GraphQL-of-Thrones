@@ -23,6 +23,7 @@ const Book = {
 };
 
 const BookType = `
+  # Book data from API of Ice and Fire https://github.com/joakimskoog/AnApiOfIceAndFire
   type Book {
     Id: ID!
     Name: String

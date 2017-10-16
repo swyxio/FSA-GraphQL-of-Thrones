@@ -34,6 +34,7 @@ const Character = {
 };
 
 const CharacterType = `
+  # Character data from API of Ice and Fire https://github.com/joakimskoog/AnApiOfIceAndFire
   type Character {
     Id: ID
     Name: String
