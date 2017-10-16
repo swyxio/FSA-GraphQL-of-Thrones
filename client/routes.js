@@ -10,7 +10,8 @@ import {
   Signup,
   UserHome,
   SidebarContent,
-  WinScreen
+  WinScreen,
+  Landing
 } from "./components";
 import { me } from "./store";
 import Sidebar from "react-sidebar";
@@ -75,7 +76,7 @@ class Routes extends Component {
         <Switch>
           <Route path="/greatsuccess" component={WinScreen} />
           <Route
-            path="/"
+            path="/learn"
             render={() =>
               <Sidebar {...sidebarProps}>
                 <Main>
@@ -83,6 +84,7 @@ class Routes extends Component {
                 </Main>
               </Sidebar>}
           />
+          <Route path="/" component={Landing} />
         </Switch>
       </Router>
     );

@@ -67,7 +67,7 @@ class MainPanel extends React.Component {
               </StyledAccordionItemHeader>
               <div>
                 {md([gamestate.levelInfo.story])}
-                {gamestate.currentLevel === 0 &&
+                {gamestate.currentLevel === 1 &&
                   <pre style={Hodoreastereggstyle}>
                     <code>
                       {Hodoreasteregg}

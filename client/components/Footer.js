@@ -54,8 +54,9 @@ class Footer extends React.Component {
             : <div />}
         </StyledSection2>
         <StyledSection3>
-          <button id="BUTTON_14" />
-          Get Help
+          {/*<button id="BUTTON_14" />
+          Get Help*/}
+          by @swyx
         </StyledSection3>
       </StyledNav>
     );

@@ -11,8 +11,8 @@ const AllInteractionCharactersResolver = (_, { Name }) => {
 const caseinsensitiveIncludes = (bigstring, substring) =>
   bigstring.toLowerCase().includes(substring.toLowerCase());
 
-const InteractionCharacterResolver = (_, { CharacterId }) => {
-  if (CharacterId) return find(inodes, { Id: CharacterId });
+const InteractionCharacterResolver = (_, { Id }) => {
+  if (Id) return find(inodes, { Id: Id });
   return;
 };
 

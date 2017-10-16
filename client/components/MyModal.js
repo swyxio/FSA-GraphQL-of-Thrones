@@ -14,6 +14,8 @@ class MyModal extends React.Component {
         Correct! Level {gamestate.currentLevel} cleared! Feel free to play
         around some more, and you can hit <b>Next</b> when you are ready to
         proceed.
+        <hr />
+        <TweetButton text="Tweet your Victory!" />
       </p>
     );
     const customStyles = {
@@ -48,11 +50,10 @@ class MyModal extends React.Component {
                 ? showVictory
                 : md([gamestate.levelInfo.story])}
             </div>
-            <TweetButton />
           </div>
           <div>
             <button onClick={closeModal} className="modal__button">
-              Ok, got it!
+              Hit Next to proceed. Got it!
             </button>
           </div>
         </Modal>

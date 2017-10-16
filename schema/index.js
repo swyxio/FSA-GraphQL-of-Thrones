@@ -53,6 +53,7 @@ const Query = `
     allTVBetrayals(Betrayal: String, Perpetrator: String, Victim: String): [TVBetrayal]
     TVBetrayal: TVBetrayal
     Hodor: String
+    ThingsJonSnowKnows: [String]
   }
 `;
 const SchemaDefinition = `
@@ -90,7 +91,8 @@ const resolvers = {
     TVLocation: TVLocation,
     allTVBetrayals: AllTVBetrayalsResolver,
     TVBetrayal: TVBetrayal,
-    Hodor: () => "Hodor"
+    Hodor: () => "Hodor",
+    ThingsJonSnowKnows: () => []
   },
   House,
   Book,

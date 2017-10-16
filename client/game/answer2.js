@@ -6,7 +6,7 @@ const answer = {
 };
 
 module.exports = {
-  title: "Just the One please",
+  title: "LEARN: Just the One please",
   realsubTitle: "Pass an argument when making a query",
   character: "GRRM",
   instructions: `You're already getting productive with GraphQL! Sometimes you will need to pass an argument, often when requesting one specific thing in a collection of things. 

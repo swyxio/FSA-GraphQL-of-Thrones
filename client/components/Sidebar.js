@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import gamedata from "../game";
-import { gotoLevel } from "../store";
+import { gotoLevel, openModal } from "../store";
 
 const styles = {
   sidebar: {
@@ -38,7 +38,7 @@ class SidebarContent extends React.Component {
         style={styles.sidebarLink}
         onClick={() => this.props.gotoLevel(ind)}
       >
-        {ind}. {singlegame.title}
+        {singlegame.title}
       </div>
     );
 
@@ -79,6 +79,7 @@ const mapDispatch = dispatch => {
   return {
     gotoLevel(x) {
       dispatch(gotoLevel(x));
+      dispatch(openModal());
     }
   };
 };

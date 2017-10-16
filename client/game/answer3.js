@@ -8,7 +8,7 @@ const answer = {
 };
 
 module.exports = {
-  title: "Maybe I should Draw?",
+  title: "LEARN: A Query by any other Alias",
   realsubTitle: "Learn to alias query results",
   character: "GRRM",
   instructions: `Let's start exploring some of the unique benefits of GraphQL. Since you are simply specifying the shape of the response you want, you can query multiple versions of the same type of thing in a single request.
@@ -46,7 +46,7 @@ Now iterate on your query using all your knowledge so far to answer the question
 Hint: Use **allBooks** and find their Id's first!
   
 For more, check out: http://graphql.org/learn/queries/#aliases`,
-  story: `Ok I've written a few chapters. 
+  story: `Ok I've written a couple chapters. Thats enough for the year.
     Now I feel like drawing. Can you figure out the ISBN of my last two Graphic Novels?
     Oh, also could you name them HedgeKnight1 and HedgeKnight2 please.`,
   answer: answer

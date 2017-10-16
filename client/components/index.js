@@ -8,3 +8,4 @@ export { default as UserHome } from "./user-home";
 // export { Login, Signup } from "./auth-form";
 export { default as SidebarContent } from "./Sidebar";
 export { default as WinScreen } from "./WinScreen";
+export { default as Landing } from "./Landing";

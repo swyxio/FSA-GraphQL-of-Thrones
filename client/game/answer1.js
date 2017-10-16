@@ -52,7 +52,7 @@ const answer = {
 };
 
 module.exports = {
-  title: "Winter Is (Never) Coming",
+  title: "LEARN: Winter Is (Never) Coming",
   realsubTitle: "Make a query on specific fields",
   character: "GRRM",
   instructions: `Now it's getting serious: 

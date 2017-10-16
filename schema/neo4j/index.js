@@ -68,11 +68,8 @@ const TVEpisodeLocationType = `
 
 const AllTVBetrayalsResolver = (_, { Betrayal, Perpetrator, Victim }) => {
   if (Betrayal)
-    return (
-      console.log(Betrayal) ||
-      filter(Betrayalsdata, bet =>
-        caseinsensitiveIncludes(bet.Betrayal, Betrayal)
-      )
+    return filter(Betrayalsdata, bet =>
+      caseinsensitiveIncludes(bet.Betrayal, Betrayal)
     );
   if (Perpetrator)
     return filter(Betrayalsdata, bet =>
