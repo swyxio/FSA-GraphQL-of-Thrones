@@ -66,7 +66,7 @@ export default class CustomGraphiQL extends React.Component {
         query={
           custquery || "query MyQuery {\n  #write your query here\n  \n  \n}"
         }
-        variable={custvariables || ""}
+        variables={custvariables || ""}
         {...this.state}
       >
         <GraphiQL.Logo>GraphiQL of Thrones</GraphiQL.Logo>

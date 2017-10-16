@@ -20,8 +20,10 @@ module.exports = {
   customgraphiql: {
     custquery: `
 # please edit the below example query/fragment to answer the question!
-Book(Id:3) {
-  ...usefulFields
+{
+  Book(Id:3) {
+    ...usefulFields
+  }
 }
 fragment usefulFields on Book {
   Name
@@ -55,8 +57,8 @@ Hint: remember to alias as HedgeKnight1 and HedgeKnight2.
   For more, check out: http://graphql.org/learn/queries/#fragments`,
   story: `I'm a putz. I need way more than just the ISBN of those two Graphic Novels.
 
-Can you also get the Name, Country, MediaType, and NumberOfPages of those two Hedge Knight books?
+Can you also get the Name, Country, MediaType, and NumberOfPages for HedgeKnight1 and HedgeKnight2?
 
-Also, I'm probably gonna need those four pieces of information a lot, you might want to save the query somehow or you're gonna have a looot of typing to do!`,
+Also, I'm probably gonna need those four **useful fields** of information a lot, you might want to save the query somehow or you're gonna have a looot of typing to do!`,
   answer: answer
 };

@@ -1,6 +1,8 @@
 const LiveReloadPlugin = require("webpack-livereload-plugin");
 const isDev = process.env.NODE_ENV === "development";
 const webpack = require("webpack");
+var BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 module.exports = {
   entry: "./client/index.js",
@@ -35,7 +37,8 @@ module.exports = {
         new webpack.ContextReplacementPlugin(
           /graphql-language-service-interface[\\/]dist$/,
           new RegExp(`^\\./.*\\.js$`)
-        )
+        ),
+        new BundleAnalyzerPlugin()
       ]
     : [
         new webpack.ContextReplacementPlugin(

@@ -4,5 +4,6 @@ export default [
   require("./answer2"),
   require("./answer3"),
   require("./answer4"),
-  require("./answer5")
+  require("./answer5"),
+  require("./answer6")
 ];

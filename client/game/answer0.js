@@ -2,7 +2,12 @@ module.exports = {
   title: "Hodor World",
   realsubTitle: "Make Your First Query",
   customgraphiql: {
-    custquery: `{\n  #Hodor\n  \n  #Hint: Type "Hodor" above \n  #Then hit ⌘ + Enter\n}`
+    custquery: `{
+#Hodor
+
+#Hint: Type "Hodor" above
+#Then hit ⌘ + Enter
+}`
   },
   character: "Hodor",
   instructions: `Welcome! Hodor has helpfully given you the answer above so you just need to type it in to the panel on the right (Just under 'GraphQL of Thrones'). 
