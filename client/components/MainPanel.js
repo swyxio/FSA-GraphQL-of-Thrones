@@ -6,7 +6,7 @@ import SplitterLayout from "react-splitter-layout";
 import styled from "styled-components";
 import fetch from "isomorphic-fetch";
 import md from "react-markings";
-import { correctAnswer } from "../store";
+import { correctAnswer, openModal } from "../store";
 const checkIfCorrectAnswer = (response, answer) => Object.keys(answer).every();
 
 const graphQLFetcher = handleCorrectAnswer => graphQLParams => {
@@ -20,7 +20,6 @@ const graphQLFetcher = handleCorrectAnswer => graphQLParams => {
     .then(x => {
       console.log("response", x.data);
       console.log("correctAnswer", localcurrentanswer);
-      console.log("handleCorrectAnswer", handleCorrectAnswer);
       if (_.isEqual(localcurrentanswer, x.data)) {
         console.log("****_.isEqual(correctAnswer, x.data)");
         return handleCorrectAnswer(x);
@@ -92,26 +91,16 @@ class MainPanel extends React.Component {
               </div>
             </AccordionItem>
             <AccordionItem title={"🤼 Community"} slug={3} key={3}>
-              Steve Jobs agile affordances user story sticky note prototype
-              pivot thought leader ideate food-truck. Entrepreneur ideate
-              SpaceTeam waterfall is so 2000 and late ideate earned media
-              minimum viable product ideate venture capital food-truck workflow
-              actionable insight minimum viable product. Bootstrapping Steve
-              Jobs co-working entrepreneur minimum viable product minimum viable
-              product intuitive thinker-maker-doer ideate big data moleskine.
-              Moleskine human-centered design cortado engaging workflow long
-              shadow actionable insight bootstrapping.
+              We have yet to build out the community feature. In the meantime,
+              please just yell at
+              <a href="http://twitter.com/swyx">@swyx on Twitter</a>!
             </AccordionItem>
             <AccordionItem title={"🐛 Report a Bug"} slug={4} key={4}>
-              Steve Jobs agile affordances user story sticky note prototype
-              pivot thought leader ideate food-truck. Entrepreneur ideate
-              SpaceTeam waterfall is so 2000 and late ideate earned media
-              minimum viable product ideate venture capital food-truck workflow
-              actionable insight minimum viable product. Bootstrapping Steve
-              Jobs co-working entrepreneur minimum viable product minimum viable
-              product intuitive thinker-maker-doer ideate big data moleskine.
-              Moleskine human-centered design cortado engaging workflow long
-              shadow actionable insight bootstrapping.
+              <div>
+                We have yet to build out good bug reporting. In the meantime,
+                please just yell at
+                <a href="http://twitter.com/swyx">@swyx on Twitter</a>!
+              </div>
             </AccordionItem>
           </Accordion>
           <CustomGraphiQL
@@ -140,6 +129,7 @@ const mapDispatch = dispatch => {
   return {
     handleCorrectAnswer(x) {
       dispatch(correctAnswer());
+      dispatch(openModal());
       return x;
     }
   };

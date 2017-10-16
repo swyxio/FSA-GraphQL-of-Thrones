@@ -1,7 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
-import { wonLevel, resetLevels, gotoLevel, correctAnswer } from "../store";
+import {
+  wonLevel,
+  resetLevels,
+  gotoLevel,
+  backLevel,
+  correctAnswer,
+  openModal
+} from "../store";
 
 class Footer extends React.Component {
   render() {
@@ -14,6 +21,7 @@ class Footer extends React.Component {
     const {
       handleCorrectAnswer,
       wonLevel,
+      backLevel,
       menuButtonClick,
       gamestate
     } = this.props;
@@ -29,7 +37,9 @@ class Footer extends React.Component {
           </BurgerDiv>
         </StyledSection1>
         <StyledSection2>
-          <Button10>Back</Button10>
+          <Button10 disabled={!currentLevel} onClick={backLevel}>
+            Back
+          </Button10>
           <div id="DIV_11">
             {currentLevel}/{totalLevels}
           </div>
@@ -218,6 +228,10 @@ const mapDispatch = dispatch => {
   return {
     wonLevel(level) {
       dispatch(wonLevel(level));
+      dispatch(openModal());
+    },
+    backLevel() {
+      dispatch(backLevel());
     },
 
     resetLevels(e) {
@@ -228,6 +242,7 @@ const mapDispatch = dispatch => {
     gotoLevel(e, level) {
       e.preventDefault();
       dispatch(gotoLevel(level));
+      dispatch(openModal());
     },
 
     handleCorrectAnswer(x) {

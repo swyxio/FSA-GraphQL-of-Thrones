@@ -62,6 +62,8 @@ module.exports = {
     
 This is how frontend devs can use GraphQL to tailor responses to exactly what they need, while backend devs just worry about getting the data and agreeing on the schema (more on that later).
 
+Hint: the two fields you are looking for in the schema are **Name** and **ReleaseDate**. See the Documentation Explorer on the far right to explore all the fields available to you.
+
 For more, check out: <http://graphql.org/learn/queries/#fields>
     `,
   story:

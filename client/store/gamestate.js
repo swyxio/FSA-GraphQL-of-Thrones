@@ -4,6 +4,7 @@ import game from "../game";
  * ACTION TYPES
  */
 const WON_LEVEL = "WON_LEVEL";
+const BACK_LEVEL = "BACK_LEVEL";
 const RESET_LEVELS = "RESET_LEVELS";
 const GOTO_LEVEL = "GOTO_LEVEL";
 const CORRECT_ANSWER = "CORRECT_ANSWER";
@@ -23,6 +24,7 @@ const defaultLevelData = {
  * ACTION CREATORS
  */
 export const wonLevel = level => ({ type: WON_LEVEL, level });
+export const backLevel = () => ({ type: BACK_LEVEL });
 export const resetLevels = () => ({ type: RESET_LEVELS });
 export const gotoLevel = level => ({ type: GOTO_LEVEL, level });
 export const correctAnswer = () => ({ type: CORRECT_ANSWER });
@@ -31,9 +33,19 @@ export const correctAnswer = () => ({ type: CORRECT_ANSWER });
  * REDUCER
  */
 export default function(state = defaultLevelData, action) {
+  let newlevel;
   switch (action.type) {
+    case BACK_LEVEL:
+      newlevel = Math.max(0, state.currentLevel - 1);
+      return {
+        currentLevel: newlevel,
+        completedLevels: state.completedLevels,
+        levelInfo: game[newlevel],
+        correctAnswer: false,
+        totalLevels: game.length - 1
+      };
     case WON_LEVEL:
-      const newlevel = Math.min(game.length - 1, action.level + 1);
+      newlevel = Math.min(game.length - 1, action.level + 1);
       return {
         currentLevel: newlevel,
         completedLevels: state.completedLevels.concat(action.level),
