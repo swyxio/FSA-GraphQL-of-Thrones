@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
 import { logout } from "../store";
+import MyModal from "./MyModal";
 
 /**
  * COMPONENT
@@ -15,6 +16,7 @@ const Main = props => {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      <MyModal />
       {children}
     </div>
   );

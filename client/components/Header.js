@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { connect } from "react-redux";
 class Header extends React.Component {
   render() {
     const StyledSection1 = StyledSection.extend`justify-content: flex-start;`;
@@ -16,9 +17,9 @@ class Header extends React.Component {
             <a href="/learn/learn-html" id="A_8">
               <i id="I_9" />
             </a>
-            Learn HTML: Elements and Structure
+            {this.props.gamestate.levelInfo.title}
           </StyledSection2>
-          <StyledSection3>hi</StyledSection3>
+          <StyledSection3>v0.1 Alpha</StyledSection3>
         </StyledNav>
       </StyledHeader>
     );
@@ -94,4 +95,13 @@ const StyledSection = styled.section`
   outline: rgb(255, 255, 255) none 0px;
 `;
 
-export default Header;
+/**
+ * CONTAINER
+ */
+const mapState = state => {
+  return {
+    gamestate: state.gamestate
+  };
+};
+
+export default connect(mapState)(Header);

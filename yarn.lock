@@ -2116,6 +2116,10 @@ execa@^0.7.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
+exenv@^1.2.0:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
+
 expand-brackets@^0.1.4:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/expand-brackets/-/expand-brackets-0.1.5.tgz#df07284e342a807cd733ac5af72411e581d1177b"
@@ -4533,6 +4537,13 @@ react-markings@^1.1.6:
     commonmark "^0.27.0"
     commonmark-react-renderer "^4.3.3"
 
+react-modal@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.0.3.tgz#276580ccf3d48edab0e34df682e1e1c74856dc8f"
+  dependencies:
+    exenv "^1.2.0"
+    prop-types "^15.5.10"
+
 react-redux@^5.0.2:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
@@ -5334,9 +5345,9 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-swyx-graphiql@^0.11.5:
-  version "0.11.5"
-  resolved "https://registry.yarnpkg.com/swyx-graphiql/-/swyx-graphiql-0.11.5.tgz#a4ba73e450136f6ff9115255258221a24f716a02"
+swyx-graphiql@^0.11.7:
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/swyx-graphiql/-/swyx-graphiql-0.11.7.tgz#6ba9872a8f7d7185cb084f46e5489b754a047cb8"
   dependencies:
     codemirror "^5.26.0"
     codemirror-graphql "^0.6.11"

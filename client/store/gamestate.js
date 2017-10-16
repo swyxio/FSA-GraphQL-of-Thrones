@@ -49,6 +49,7 @@ export default function(state = defaultLevelData, action) {
     case GOTO_LEVEL:
       return Object.assign({}, state, {
         currentLevel: action.level,
+        levelInfo: game[action.level],
         correctAnswer: false
       });
     case CORRECT_ANSWER:

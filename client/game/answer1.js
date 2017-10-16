@@ -1,4 +1,4 @@
-module.exports = {
+const answer = {
   allBooks: [
     {
       Name: "A Game of Thrones",
@@ -49,4 +49,22 @@ module.exports = {
       ReleaseDate: "2015-10-06T00:00:00"
     }
   ]
+};
+
+module.exports = {
+  title: "Winter Is (Never) Coming",
+  realsubTitle: "Make a query on specific fields",
+  character: "GRRM",
+  instructions: `Now it's getting serious: 
+    
+1. Query all the books (the collection named allBooks)
+2. You will see some (not all) the Books fields autopopulate. Refine your query to only the requested fields. 
+    
+This is how frontend devs can use GraphQL to tailor responses to exactly what they need, while backend devs just worry about getting the data and agreeing on the schema (more on that later).
+
+For more, check out: <http://graphql.org/learn/queries/#fields>
+    `,
+  story:
+    "Help me figure out when I should publish the Winds Of Winter. Can you get me a list of my books with their titles and release date?",
+  answer: answer
 };

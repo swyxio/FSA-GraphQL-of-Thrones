@@ -30,6 +30,23 @@ body {
 .custom-sidebar-class {
   z-index: 99;
 }
+.modal__button:hover {
+  background-color: #1d4356;
+}
+
+.modal__button {
+  background-color: #265973;
+  border: 0;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Exo 2", Lato, sans-serif;
+  font-size: 16px;
+  padding: .7em 1.2em;
+}
 
 #SPAN_5 {
   bottom: 0px;

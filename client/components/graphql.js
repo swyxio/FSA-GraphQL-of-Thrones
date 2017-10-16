@@ -5,6 +5,7 @@ const GraphiQL = require("swyx-graphiql");
 export default class CustomGraphiQL extends React.Component {
   constructor(props) {
     super(props);
+    const { custquery, custvariables } = this.props.customgraphiql || {};
     this.state = {
       // REQUIRED:
       // `fetcher` must be provided in order for GraphiQL to operate
@@ -12,8 +13,9 @@ export default class CustomGraphiQL extends React.Component {
 
       // OPTIONAL PARAMETERS
       // GraphQL artifacts
-      query: "{\n  #write your query here\n  \n  \n}",
-      variables: "",
+      // query:
+      //   custquery || "query MyQuery {\n  #write your query here\n  \n  \n}",
+      // variables: custvariables || "",
       response: "",
 
       // GraphQL Schema
@@ -39,6 +41,10 @@ export default class CustomGraphiQL extends React.Component {
       getDefaultFieldNames: null
     };
   }
+  shouldComponentUpdate(before, after) {
+    if (before.currentLevel == after.currentLevel) return false;
+    return true;
+  }
 
   // Example of using the GraphiQL Component API via a toolbar button.
   handleClickPrettifyButton(event) {
@@ -50,15 +56,20 @@ export default class CustomGraphiQL extends React.Component {
   }
 
   render() {
+    const { custquery, custvariables } = this.props.customgraphiql || {};
     return (
       <GraphiQL
         ref={c => {
           this.graphiql = c;
         }}
         editorTheme="solarized light"
+        query={
+          custquery || "query MyQuery {\n  #write your query here\n  \n  \n}"
+        }
+        variable={custvariables || ""}
         {...this.state}
       >
-        <GraphiQL.Logo>GraphQL of Thrones</GraphiQL.Logo>
+        <GraphiQL.Logo>GraphiQL of Thrones</GraphiQL.Logo>
         <GraphiQL.Toolbar>
           <GraphiQL.Button
             onClick={this.handleClickPrettifyButton}

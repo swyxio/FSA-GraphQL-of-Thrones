@@ -114,7 +114,11 @@ class MainPanel extends React.Component {
               shadow actionable insight bootstrapping.
             </AccordionItem>
           </Accordion>
-          <CustomGraphiQL fetcher={graphQLFetcher(handleCorrectAnswer)} />
+          <CustomGraphiQL
+            fetcher={graphQLFetcher(handleCorrectAnswer)}
+            customgraphiql={gamestate.levelInfo.customgraphiql}
+            currentLevel={gamestate.currentLevel}
+          />
         </SplitterLayout>
       </div>
     );

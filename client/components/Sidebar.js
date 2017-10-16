@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import gamedata from "../game";
+import { gotoLevel } from "../store";
 
 const styles = {
   sidebar: {
@@ -32,9 +33,13 @@ class SidebarContent extends React.Component {
       : styles.sidebar;
 
     const links = gamedata.map((singlegame, ind) =>
-      <a key={ind} style={styles.sidebarLink}>
+      <div
+        key={ind}
+        style={styles.sidebarLink}
+        onClick={() => this.props.gotoLevel(ind)}
+      >
         {ind}. {singlegame.title}
-      </a>
+      </div>
     );
 
     return (
@@ -66,7 +71,11 @@ const mapState = state => {
  * CONTAINER
  */
 const mapDispatch = dispatch => {
-  return {};
+  return {
+    gotoLevel(x) {
+      dispatch(gotoLevel(x));
+    }
+  };
 };
 
 export default connect(mapState, mapDispatch)(SidebarContent);
