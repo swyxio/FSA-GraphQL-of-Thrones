@@ -1,13 +1,13 @@
 export default [
+  require("./learn0"),
   require("./play0"),
-  require("./answer0"),
-  require("./answer1"),
+  require("./learn1"),
   require("./play1"),
-  require("./answer2"),
+  require("./learn2"),
   require("./play2"),
-  require("./answer3"),
+  require("./learn3"),
   require("./play3"),
-  require("./answer4"),
-  require("./answer5"),
-  require("./answer6")
+  require("./learn4"),
+  require("./learn5"),
+  require("./learn6")
 ];

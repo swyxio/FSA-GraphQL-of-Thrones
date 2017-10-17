@@ -59,9 +59,38 @@ class LandingPage extends React.Component {
             </div>
           </div>
         </nav>
+        <header
+          className="header-style-8 p-5"
+          style={{ backgroundImage: "url(./kingindanorf.jpg-large)" }}
+        >
+          <div className="overlay op-7" />
+          <div className="container">
+            <div className="content p-relative z-1">
+              <h1 className="font-handwritten p-3 text-center my-4 cwhite font-jumbo hero-content bg-hue-red">
+                <span>
+                  GraphQL <br /> of Thrones
+                </span>
+              </h1>
+
+              <div className="col-12 text-center mt-5">
+                <Link
+                  to="/learn"
+                  className="btn btn-outline-danger btn-lg  m-2"
+                >
+                  Play and Learn!
+                </Link>
+              </div>
+            </div>
+          </div>
+        </header>
+
         <div className="container">
           <br /> <br />
-          <section className="py-5 bg-light">
+          <section
+            className="py-5 cwhite background-fixed p-relative"
+            style={{ backgroundImage: "url('./samlibrary.jpg')" }}
+          >
+            <div className="overlay op-5" />
             <div className="container">
               <div className="row">
                 <div className="col-md-8 mx-auto text-center">
@@ -167,10 +196,12 @@ class LandingPage extends React.Component {
           </section>
           <br /> <br />
           <section
-            className="py-5 cwhite background-fixed p-relative"
-            style={{ backgroundImage: "url('./underexpress/red_clouds.jpeg')" }}
+            className="py-5 bg-dark cwhite"
+            style={{
+              backgroundImage: "url(./mhysa-1.jpg)",
+              backgroundSize: "cover"
+            }}
           >
-            <div className="overlay op-5" />
             <div className="container">
               <div className="row">
                 <div className="col-12 col-md-8 mx-auto text-center">
@@ -236,6 +267,9 @@ class LandingPage extends React.Component {
               </ul>
               <small className="lighter mb-3 op-8">
                 Landing Page Design ©️ 2017 UnderExpress
+                <br />
+                All references to A Song of Ice and Fire Books and Game of
+                Thrones Characters are copyright George R. R. Martin and HBO.
               </small>
             </div>
           </div>

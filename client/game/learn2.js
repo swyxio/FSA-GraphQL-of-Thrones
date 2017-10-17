@@ -17,7 +17,7 @@ module.exports = {
 1. Hit "< Docs" on the far right to open up the Documentation Explainer and drill into the root Query to see the kinds of arguments accepted. Looks like Books takes an Id!
 2. We haven't seen this Id field before, but it's there for every Book. Query "allBooks" (like you did before) for Id's and note the last Id
 3. Now clear your query and start again, querying "Books" instead of "allBooks". 
-4. How do you pass the Id argument in? If I was requesting Book 14, like this: "Books(Id: 14)"
+4. How do you pass the Id argument in? If I was requesting Book 14, like this: "Book(Id: 14)"
 5. Refine your Query to return only the requested fields :) You already know how to do that.
 
 For more, check out: <http://graphql.org/learn/queries/#arguments>

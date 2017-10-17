@@ -48,12 +48,20 @@ class MyModal extends React.Component {
             <div>
               {gamestate.correctAnswer
                 ? showVictory
-                : md([gamestate.levelInfo.story])}
+                : <div>
+                    <h3 style={{ textAlign: "center" }}>
+                      {gamestate.levelInfo.character}
+                    </h3>
+                    <hr />
+                    {md([gamestate.levelInfo.story])}
+                  </div>}
             </div>
           </div>
           <div>
             <button onClick={closeModal} className="modal__button">
-              Hit Next to proceed. Got it!
+              {gamestate.correctAnswer
+                ? "Hit Next to proceed. Got it!"
+                : "Shall we begin?"}
             </button>
           </div>
         </Modal>

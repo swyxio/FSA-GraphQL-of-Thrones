@@ -10,7 +10,7 @@ const styles = {
   },
   sidebarLink: {
     display: "block",
-    padding: "16px 0px",
+    padding: "8px 0px",
     color: "#757575",
     textDecoration: "none"
   },
@@ -31,13 +31,17 @@ class SidebarContent extends React.Component {
     const style = this.props.style
       ? { ...styles.sidebar, ...props.style }
       : styles.sidebar;
-
+    const { gamestate } = this.props;
+    console.log("****", gamestate);
     const links = gamedata.map((singlegame, ind) =>
       <div
         key={ind}
         style={styles.sidebarLink}
         onClick={() => this.props.gotoLevel(ind)}
       >
+        {gamestate.completedLevels.includes(ind)
+          ? <span>✓</span>
+          : <span>☐</span>}
         {singlegame.title}
       </div>
     );

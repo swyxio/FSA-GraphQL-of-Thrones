@@ -48,6 +48,7 @@ class Footer extends React.Component {
             ? <Button10
                 disabled={!gamestate.correctAnswer}
                 onClick={() => wonLevel(currentLevel)}
+                style={{ borderColor: "limegreen", borderWidth: "2px" }}
               >
                 Next
               </Button10>
@@ -56,7 +57,10 @@ class Footer extends React.Component {
         <StyledSection3>
           {/*<button id="BUTTON_14" />
           Get Help*/}
-          by @swyx
+          by{" "}
+          <a href="https://twitter.com/swyx" target="_blank">
+            @swyx
+          </a>
         </StyledSection3>
       </StyledNav>
     );

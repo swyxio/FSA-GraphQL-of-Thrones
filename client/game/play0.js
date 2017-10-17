@@ -1,32 +1,30 @@
 module.exports = {
-  title: "LEARN: Welcome!",
-  realsubTitle: "Orientation",
+  title: "PLAY: Hodor World",
+  realsubTitle: "Make Your First Query",
   customgraphiql: {
     custquery: `{
-  ThingsJonSnowKnows
+#Hodor
 
-  #Click in here and hit ⌘ + Enter
+#Hint: Type "Hodor" above
+#Then hit ⌘ + Enter
 }`
   },
-  character: "GRRM",
-  story: `This is a little playground we've set up for you to learn GraphQL. 
+  character: "Hodor",
+  instructions: `Hodor has helpfully given you the answer above so you just need to type it in to the panel on the right (Just under 'GraphQL of Thrones'). 
   
-  It makes use of a little component called **GraphiQL** to help you mock up GraphQL queries.
-  You can see it here named "GraphiQL of Thrones" (because why not?)
+  This is how you make requests in GraphQL! For more, check out <http://graphql.org/learn/>`,
+  story: `
+  Hodor **hodor** hodor hodor Hodor hodor hodor Hodor. Hodor hodor hodor Hodor hodor hodor Hodor hodor hodor Hodor.
 
-  The left panel is the Query Editor, where you can put in your queries (and other things). Tucked at the way at the bottom is the **Query Variables Editor**, which you will only need later.
+  > Hodor hodor hodor Hodor hodor hodor Hodor hodor hodor Hodor. Hodor hodor hodor Hodor!!!!
 
-  On the right there is a blank panel, which will give you the responses from your queries.
+  - Hodor hodor hodor Hodor hodor hodor Hodor hodor hodor Hodor.
+  - Hodor hodor hodor Hodor HODOR.
+  - Hodor hodor hodor Hodor HODOR!!
 
-  On the far right you can see the Documentation Explorer, which gives you a comprehensive listing of everything you can query for.
-
-  You can resize or minimize these panels as you wish.
-
-  Once you're comfortable with this, select the **Query Editor** and hit ⌘ + Enter to run the query and continue.`,
-  instructions: `
-  We will alternate between PLAY and LEARN modes. LEARN introduces new concepts in a serious manner, while in PLAY you get a chance to apply this while roleplaying as a Game of Thrones character
+  Hodor:
   `,
   answer: {
-    ThingsJonSnowKnows: []
+    Hodor: "Hodor"
   }
 };

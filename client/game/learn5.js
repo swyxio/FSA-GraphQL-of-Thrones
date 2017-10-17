@@ -10,7 +10,7 @@ const answer = {
 };
 
 module.exports = {
-  title: "DIY with: Variables",
+  title: "LEARN: Query Variables",
   realsubTitle: "Use variables like a sane person would",
   character: "GRRM",
   customgraphiql: {

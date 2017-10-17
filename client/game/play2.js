@@ -1,7 +1,19 @@
 const answer = {
-  Book: {
-    NumberOfPages: 368,
-    ReleaseDate: "2015-10-06T00:00:00"
+  Character: {
+    Aliases: [
+      "The Imp",
+      "Halfman",
+      "The boyman",
+      "Giant of Lannister",
+      "Lord Tywin's Doom",
+      "Lord Tywin's Bane",
+      "Yollo",
+      "Hugor Hill",
+      "No-Nose",
+      "Freak",
+      "Dwarf"
+    ],
+    Born: "In 273 AC, at Casterly Rock"
   }
 };
 

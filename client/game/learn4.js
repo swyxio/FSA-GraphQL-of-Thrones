@@ -14,7 +14,7 @@ const answer = {
 };
 
 module.exports = {
-  title: "Keeping DRY",
+  title: "LEARN: Keeping DRY",
   realsubTitle: "Define reusable query fragments",
   character: "GRRM",
   customgraphiql: {

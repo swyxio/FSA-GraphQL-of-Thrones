@@ -25,7 +25,7 @@ const answer = {
 };
 
 module.exports = {
-  title: "DIY with: Directives",
+  title: "LEARN: Directives",
   realsubTitle: "Toggling fields on and off",
   character: "GRRM",
   customgraphiql: {

@@ -66,7 +66,8 @@ Hint: the two fields you are looking for in the schema are **Name** and **Releas
 
 For more, check out: <http://graphql.org/learn/queries/#fields>
     `,
-  story:
-    "Help me figure out when I should publish the Winds Of Winter. Can you get me a list of my books with their titles and release date?",
+  story: `Help me figure out when I should publish the Winds Of Winter. 
+    
+Can you get me a list of my books with their titles and release date?`,
   answer: answer
 };
