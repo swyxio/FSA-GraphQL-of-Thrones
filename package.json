@@ -48,6 +48,7 @@
     "react-sidebar": "^2.3.2",
     "react-splitter-layout": "^3.0.0",
     "redux": "^3.6.0",
+    "redux-localstorage": "^0.4.1",
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.2.0",
     "sequelize": "^4.3.1",
