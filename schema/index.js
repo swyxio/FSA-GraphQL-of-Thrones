@@ -32,6 +32,12 @@ const {
   AllTVBetrayalsResolver,
   TVBetrayalResolver
 } = require("./neo4j");
+const {
+  CommentResolver,
+  CommentsResolver,
+  CommentMutations,
+  CommentType
+} = require("./Comment");
 const { Book, BookType, AllBooksResolver, BookResolver } = require("./Book");
 
 const Query = `
@@ -52,13 +58,25 @@ const Query = `
     TVLocation: TVLocation
     allTVBetrayals(Betrayal: String, Perpetrator: String, Victim: String): [TVBetrayal]
     TVBetrayal: TVBetrayal
+    # everything following are not serious queries
+    Comment: Comment
+    Comments: [Comment]
     Hodor: String
     ThingsJonSnowKnows: [String]
   }
 `;
+const Mutation = `
+# this schema allows the following mutation:
+# addComment. Must supply a comment String, and optionally CommenterName.
+type Mutation {
+  addComment (comment: String, CommenterName: String): Comment
+}
+`;
 const SchemaDefinition = `
+  # for most of the questions, you will only need to use Query
   schema {
     query: Query
+    mutation: Mutation
   }
 `;
 
@@ -66,12 +84,14 @@ const SchemaDefinition = `
 const typeDefs = [
   SchemaDefinition,
   Query,
+  Mutation,
   CharacterType,
   BookType,
   HouseType,
   InteractionType,
   TVEpisodeLocationType,
-  TVBetrayalType
+  TVBetrayalType,
+  CommentType
 ];
 
 const resolvers = {
@@ -91,8 +111,13 @@ const resolvers = {
     TVLocation: TVLocation,
     allTVBetrayals: AllTVBetrayalsResolver,
     TVBetrayal: TVBetrayal,
+    Comments: CommentsResolver,
+    Comment: CommentResolver,
     Hodor: () => "Hodor",
     ThingsJonSnowKnows: () => []
+  },
+  Mutation: {
+    addComment: CommentMutations
   },
   House,
   Book,
