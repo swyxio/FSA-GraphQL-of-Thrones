@@ -1,25 +1,11 @@
 const answer = {
   allBooks: [
     {
-      ISBN: "978-0976401100",
-      Name: "The Hedge Knight",
-      Country: "United States",
-      MediaType: "Graphic Novel",
-      NumberOfPages: 164
-    },
-    {
-      ISBN: "978-0765360267",
-      Name: "The Mystery Knight",
-      Country: "United States",
-      MediaType: "Paperback",
-      NumberOfPages: 416
-    },
-    {
-      ISBN: "978-0345533487",
-      Name: "A Knight of the Seven Kingdoms",
+      ISBN: "978-0553103540",
+      Name: "A Game of Thrones",
       Country: "United States",
       MediaType: "Hardcover",
-      NumberOfPages: 368
+      NumberOfPages: 694
     }
   ]
 };

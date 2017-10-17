@@ -17,7 +17,7 @@ const defaultLevelData = {
   completedLevels: [],
   levelInfo: game[0],
   correctAnswer: false,
-  totalLevels: game.length - 1
+  totalLevels: game.length
 };
 
 /**
@@ -42,7 +42,7 @@ export default function(state = defaultLevelData, action) {
         completedLevels: state.completedLevels,
         levelInfo: game[newlevel],
         correctAnswer: false,
-        totalLevels: game.length - 1
+        totalLevels: game.length
       };
     case WON_LEVEL:
       newlevel = Math.min(game.length - 1, action.level + 1);
@@ -51,7 +51,7 @@ export default function(state = defaultLevelData, action) {
         completedLevels: state.completedLevels.concat(action.level),
         levelInfo: game[newlevel],
         correctAnswer: false,
-        totalLevels: game.length - 1
+        totalLevels: game.length
       };
     case RESET_LEVELS:
       return Object.assign({}, state, {

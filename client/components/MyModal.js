@@ -4,19 +4,20 @@ import Modal from "react-modal";
 import { openModal, closeModal } from "../store";
 import md from "react-markings";
 import TweetButton from "./TweetButton";
+import history from "../history";
 
 class MyModal extends React.Component {
   render() {
     const { openModal, closeModal, modalstate, gamestate } = this.props;
     // <button onClick={openModal}>Open Modal</button>
     const showVictory = (
-      <p>
+      <div>
         Correct! Level {gamestate.currentLevel} cleared! Feel free to play
         around some more, and you can hit <b>Next</b> when you are ready to
         proceed.
         <hr />
         <TweetButton text="Tweet your Victory!" />
-      </p>
+      </div>
     );
     const customStyles = {
       overlay: {
@@ -58,7 +59,10 @@ class MyModal extends React.Component {
             </div>
           </div>
           <div>
-            <button onClick={closeModal} className="modal__button">
+            <button
+              onClick={() => closeModal(gamestate)}
+              className="modal__button"
+            >
               {gamestate.correctAnswer
                 ? "Hit Next to proceed. Got it!"
                 : "Shall we begin?"}
@@ -94,8 +98,12 @@ const mapDispatch = dispatch => {
     openModal() {
       dispatch(openModal());
     },
-    closeModal() {
+    closeModal(gamestate) {
       dispatch(closeModal());
+      const isLastVictory =
+        gamestate.correctAnswer &&
+        gamestate.currentLevel == gamestate.totalLevels - 1;
+      if (isLastVictory) history.push("/greatsuccess");
     }
   };
 };

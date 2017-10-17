@@ -224,6 +224,7 @@ class LandingPage extends React.Component {
               </div>
             </div>
           </section>
+          <br /> <br />
         </div>
 
         <footer className="footer-style-4 p-3 bg-hue-dark cwhite">
