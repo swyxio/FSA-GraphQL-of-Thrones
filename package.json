@@ -54,7 +54,7 @@
     "sequelize": "^4.3.1",
     "socket.io": "^2.0.3",
     "styled-components": "^2.2.1",
-    "swyx-graphiql": "^0.11.8"
+    "swyx-graphiql": "^0.11.9"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.9.0",

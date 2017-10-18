@@ -1,7 +1,14 @@
 const caseinsensitiveIncludes = (bigstring, substring) =>
   bigstring.toLowerCase().includes(substring.toLowerCase());
 
-const inMemoryComments = [];
+const inMemoryComments = [
+  {
+    CommenterName: "swyx",
+    Comment:
+      "Hello, this is a default comment from the makers of GraphQLofThrones!",
+    Timestamp: "Wed Oct 18 2017 11:43:29 GMT-0400 (EDT)"
+  }
+];
 const CommentResolver = (_, { Id }) => {
   if (Id)
     return inMemoryComments.find(x =>

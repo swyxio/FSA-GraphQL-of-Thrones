@@ -9,5 +9,6 @@ export default [
   require("./play3"),
   require("./learn4"),
   require("./learn5"),
-  require("./learn6")
+  require("./learn6"),
+  require("./learn7")
 ];
