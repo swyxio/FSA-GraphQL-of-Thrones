@@ -24,18 +24,18 @@ module.exports = {
   characterpic:
     "https://images-na.ssl-images-amazon.com/images/M/MV5BMjExNzY0NzI0NF5BMl5BanBnXkFtZTcwNjA2NDk4OQ@@._V1._SX100_SY140_.jpg",
   mission:
-    "Set up two **Character** queries for Cersei and Jaime Lannister with the default fields and alias the results as **Cersei** and **Jaime**",
+    "Set up two **Character** queries for Cersei and Jaime Lannister with the default fields and alias the results as **Cersei** and **Jaime**. Careful about the spelling and order.",
   link: "http://graphql.org/learn/queries/#aliases",
   instructions: `Practice what you learned last lesson. Find Cersei and Jaime Lannister's Id's in **allCharacters**, then use those Id's in two parallel aliased **Character** requests. 
   
   Alias them as **Cersei** and **Jaime** respectively. The default fields will do: 
 
-    - Id
-    - Name
-    - IsFemale
-    - Culture
-    - Born
-    - Died
+  - Id
+  - Name
+  - IsFemale
+  - Culture
+  - Born
+  - Died
 
   If this feels repetitive, we will learn later how to take a shortcut with these _fragments_.
   `,

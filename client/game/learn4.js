@@ -18,9 +18,9 @@ module.exports = {
   realsubTitle: "Define reusable query fragments",
   character: "GRRM",
   characterpic:
-    "http://vixenvarsity.com/wp-content/uploads/2014/06/George-RR-Martin.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/George_R._R._Martin_by_Gage_Skidmore_2.jpg/220px-George_R._R._Martin_by_Gage_Skidmore_2.jpg",
   mission:
-    "Put **Name**, **Country**, **MediaType**, and **NumberOfPages** in a **fragment** and query the fragment for **Book** 4 and 6",
+    "Put **Name**, **Country**, **MediaType**, and **NumberOfPages** in a **fragment** and query the fragment for **Book** 4 and 6, aliasing them as **HedgeKnight1** and **HedgeKnight2**.",
   link: "http://graphql.org/learn/queries/#fragments",
   customgraphiql: {
     custquery: `

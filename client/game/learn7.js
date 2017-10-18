@@ -11,7 +11,7 @@ module.exports = {
   realsubTitle: "Creating, updating, or deleting information",
   character: "GRRM",
   characterpic:
-    "http://vixenvarsity.com/wp-content/uploads/2014/06/George-RR-Martin.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/George_R._R._Martin_by_Gage_Skidmore_2.jpg/220px-George_R._R._Martin_by_Gage_Skidmore_2.jpg",
   mission: `To pass this test, simply create a new comment with **CommenterName** "NewGraphQLUser" and **Comment** {your feedback for us, whatever you have!}!
     `,
   link: "http://graphql.org/learn/queries/#mutations",

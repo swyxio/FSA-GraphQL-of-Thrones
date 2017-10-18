@@ -128,6 +128,16 @@ class WinScreen extends React.Component {
                     <ALink href="https://www.graph.cool/" text="Graph.Cool" />.
                     <br />
                     <br />
+                    GraphQL of Thrones is open source and you can see (and
+                    contribute to) the code{" "}
+                    <ALink
+                      href="ttps://github.com/sw-yx/FSA-GraphQL-of-Thrones"
+                      text="here"
+                    />{" "}
+                    or just fiddle around with{" "}
+                    <ALink href="/graphiql" text="our GraphiQL" />.
+                    <br />
+                    <br />
                     Finally, here are other great resources for newbies:
                     <ul>
                       <li>

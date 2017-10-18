@@ -12,9 +12,9 @@ module.exports = {
   realsubTitle: "Learn to alias query results",
   character: "GRRM",
   characterpic:
-    "http://vixenvarsity.com/wp-content/uploads/2014/06/George-RR-Martin.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/George_R._R._Martin_by_Gage_Skidmore_2.jpg/220px-George_R._R._Martin_by_Gage_Skidmore_2.jpg",
   mission:
-    "Return the **NumberOfPages** and **ReleaseDate** for the two **Book**s that have **MediaType** of Graphic Novel and **alias** them to **HedgeKnight1** and **HedgeKnight2** in order",
+    "Return the **ISBN** for the two **Book**s that have **MediaType** of Graphic Novel and **alias** them to **HedgeKnight1** and **HedgeKnight2** in order",
   link: "http://graphql.org/learn/queries/#aliases",
   instructions: `Let's start exploring some of the unique benefits of GraphQL. Since you are simply specifying the shape of the response you want, you can query multiple versions of the same type of thing in a single request.
 

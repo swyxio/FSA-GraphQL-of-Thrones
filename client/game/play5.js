@@ -7,7 +7,7 @@ const answer = {
       ImmediateConsequence: "Tyrion arrested by Catelyn"
     },
     {
-      Victim: "Ed Stark",
+      Victim: "Ned Stark",
       RelationshipOfPerpToVictim: "Ally",
       PerpGainReasoning: "Power",
       ImmediateConsequence: "Power Change, new King"

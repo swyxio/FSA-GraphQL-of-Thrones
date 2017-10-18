@@ -57,8 +57,8 @@ module.exports = {
   realsubTitle: "Toggling fields on and off",
   character: "GRRM",
   characterpic:
-    "http://vixenvarsity.com/wp-content/uploads/2014/06/George-RR-Martin.jpg",
-  mission: `run the query for all books with the word "the" in the title, and show their **ISBN** along with **usefulFields** using the **showISBN** variable.
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/George_R._R._Martin_by_Gage_Skidmore_2.jpg/220px-George_R._R._Martin_by_Gage_Skidmore_2.jpg",
+  mission: `Run the query for all books with the word "the" in the title, and show their **ISBN** along with **usefulFields** using the **showISBN** variable.
     `,
   link: "http://graphql.org/learn/queries/#directives",
   customgraphiql: {

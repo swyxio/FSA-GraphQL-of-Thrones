@@ -15,7 +15,6 @@ class Header extends React.Component {
             <div id="DIV_4">GraphQL of Thrones</div>
           </StyledSection1>
           <StyledSection2>
-            <a href="/learn/learn-html" id="A_8" />
             {this.props.gamestate.levelInfo.title}
           </StyledSection2>
           <StyledSection3>v0.1 Alpha</StyledSection3>

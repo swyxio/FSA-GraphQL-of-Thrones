@@ -127,23 +127,28 @@ class LandingPage extends React.Component {
                 <div className="col-12 col-sm-6 p-3">
                   <div className="text-left">
                     <h4 className="font-title font-b-line py-3 title">
-                      Efficient
+                      What even is GraphQL?
                     </h4>
                     <p>
-                      GraphQL minimizes the amount of data that needs to be
-                      transferred over the network and thus majorly improves
-                      applications operating under these conditions.
+                      Think about how you set up REST endpoints. Every time you
+                      read or do something different, you set up a new endpoint.
+                      This means you have many endpoints and each endpoint is
+                      dumb. You make each endpoint a bit smarter by putting in
+                      parameters. GraphQL flips that by having a single endpoint
+                      and making it smart.
                     </p>
                   </div>
                 </div>
                 <div className="col-12 col-sm-6 p-3">
                   <div className="text-left">
                     <h4 className="font-title font-b-line py-3 title">
-                      Polyglot
+                      What does this site do?
                     </h4>
                     <p>
-                      With GraphQL, each client can access precisely the data it
-                      needs, regardless of backend or frontend language.
+                      We make GraphQL fun to learn! Too much of GraphQL beginner
+                      material out there drowns you in the frontend/backend
+                      tooling. We focus on giving you, the total beginner,
+                      practice in **pure** GraphQL!
                     </p>
                   </div>
                 </div>
@@ -161,11 +166,11 @@ class LandingPage extends React.Component {
                 <div className="col-12 col-sm-6 p-3">
                   <div className="text-left">
                     <h4 className="font-title font-b-line py-3 title">
-                      Rapid Prototyping
+                      Do I need to watch Game of Thrones to play this?
                     </h4>
                     <p>
-                      GraphQL promotes fast development & expectation for rapid
-                      feature development
+                      Yes, you need to watch Game of Thrones. <br />No, you
+                      don't need to have watched it to play this.
                     </p>
                   </div>
                 </div>
