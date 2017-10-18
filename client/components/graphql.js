@@ -69,7 +69,7 @@ export default class CustomGraphiQL extends React.Component {
         variables={custvariables || ""}
         {...this.state}
       >
-        <GraphiQL.Logo>Query Editor</GraphiQL.Logo>
+        <GraphiQL.Logo>Query Editor (hit ⌘+Enter to run query)</GraphiQL.Logo>
         <GraphiQL.Toolbar>
           <GraphiQL.Button
             onClick={this.handleClickPrettifyButton}

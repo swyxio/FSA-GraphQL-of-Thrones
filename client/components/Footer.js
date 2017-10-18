@@ -52,6 +52,7 @@ class Footer extends React.Component {
             ? <Button10
                 disabled={!showNextButton}
                 onClick={() => wonLevel(currentLevel)}
+                id="shinybutton"
                 style={
                   showNextButtonGreen
                     ? {
@@ -61,7 +62,7 @@ class Footer extends React.Component {
                     : {}
                 }
               >
-                Next
+                Next <i />
               </Button10>
             : <div />}
         </StyledSection2>
