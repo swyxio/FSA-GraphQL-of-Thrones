@@ -69,7 +69,7 @@ export default class CustomGraphiQL extends React.Component {
         variables={custvariables || ""}
         {...this.state}
       >
-        <GraphiQL.Logo>GraphiQL of Thrones</GraphiQL.Logo>
+        <GraphiQL.Logo>Query Editor</GraphiQL.Logo>
         <GraphiQL.Toolbar>
           <GraphiQL.Button
             onClick={this.handleClickPrettifyButton}

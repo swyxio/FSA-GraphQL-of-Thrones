@@ -5433,9 +5433,9 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-swyx-graphiql@^0.11.7:
-  version "0.11.7"
-  resolved "https://registry.yarnpkg.com/swyx-graphiql/-/swyx-graphiql-0.11.7.tgz#6ba9872a8f7d7185cb084f46e5489b754a047cb8"
+swyx-graphiql@^0.11.8:
+  version "0.11.8"
+  resolved "https://registry.yarnpkg.com/swyx-graphiql/-/swyx-graphiql-0.11.8.tgz#7faa9c54d71dc49a2853c4d60faa13f019b228dc"
   dependencies:
     codemirror "^5.26.0"
     codemirror-graphql "^0.6.11"

@@ -25,7 +25,11 @@ class Footer extends React.Component {
       menuButtonClick,
       gamestate
     } = this.props;
-    const { totalLevels, currentLevel } = gamestate;
+    const { totalLevels, currentLevel, completedLevels } = gamestate;
+    const showNextButton =
+      gamestate.correctAnswer || completedLevels.includes(currentLevel);
+    const showNextButtonGreen =
+      gamestate.correctAnswer && !completedLevels.includes(currentLevel);
     return (
       <StyledNav>
         <StyledSection1>
@@ -44,11 +48,18 @@ class Footer extends React.Component {
             {currentLevel}/{totalLevels}
           </div>
 
-          {gamestate.correctAnswer
+          {showNextButton
             ? <Button10
-                disabled={!gamestate.correctAnswer}
+                disabled={!showNextButton}
                 onClick={() => wonLevel(currentLevel)}
-                style={{ borderColor: "limegreen", borderWidth: "2px" }}
+                style={
+                  showNextButtonGreen
+                    ? {
+                        borderColor: "limegreen",
+                        borderWidth: "2px"
+                      }
+                    : {}
+                }
               >
                 Next
               </Button10>

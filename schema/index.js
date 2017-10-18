@@ -69,7 +69,7 @@ const Mutation = `
 # this schema allows the following mutation:
 # addComment. Must supply a comment String, and optionally CommenterName.
 type Mutation {
-  addComment (comment: String, CommenterName: String): Comment
+  addComment (comment: String!, CommenterName: String): Comment
 }
 `;
 const SchemaDefinition = `
