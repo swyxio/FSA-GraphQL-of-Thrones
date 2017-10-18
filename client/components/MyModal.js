@@ -34,6 +34,11 @@ class MyModal extends React.Component {
         backgroundColor: gamestate.correctAnswer ? "limegreen" : "white"
       }
     };
+    const floatright = {
+      float: "right",
+      margin: "4px 10px 0px 0px",
+      border: "1px solid #000000"
+    };
     return (
       <div>
         <Modal
@@ -50,9 +55,15 @@ class MyModal extends React.Component {
               {gamestate.correctAnswer
                 ? showVictory
                 : <div>
-                    <h3 style={{ textAlign: "center" }}>
-                      {gamestate.levelInfo.character}
-                    </h3>
+                    <div style={floatright}>
+                      <h3 style={{ textAlign: "center" }}>
+                        {gamestate.levelInfo.character}
+                      </h3>
+                      <img
+                        src={gamestate.levelInfo.characterpic}
+                        alt={gamestate.levelInfo.character}
+                      />
+                    </div>
                     <hr />
                     {md([gamestate.levelInfo.story])}
                   </div>}
