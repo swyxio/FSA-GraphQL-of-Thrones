@@ -15,7 +15,7 @@ const caseinsensitiveIncludes = (bigstring, substring) =>
   bigstring.toLowerCase().includes(substring.toLowerCase());
 
 const HouseResolver = (_, { Id }) => {
-  if (Id) return housesdata[Id - 1];
+  if (Id) return find(housesdata, { Id });
 };
 
 // resolve inbound from others

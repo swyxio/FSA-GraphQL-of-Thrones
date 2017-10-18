@@ -1,5 +1,6 @@
 const { find, filter } = require("lodash");
 const charactersdata = require("./characters.json");
+const housesdata = require("../House/houses.json");
 
 // const AllCharactersResolver = () => charactersdata;
 const AllCharactersResolver = (_, { Name }) => {
@@ -27,6 +28,10 @@ const Character = {
   Spouse: char => find(charactersdata, { Id: char.Spouse }),
   Father: char => find(charactersdata, { Id: char.Father }),
   Mother: char => find(charactersdata, { Id: char.Mother }),
+  Allegiances: char =>
+    filter(housesdata, potentialhouse =>
+      char.Allegiances.includes(potentialhouse.Id)
+    ),
   Children: char =>
     filter(charactersdata, potentialchild =>
       char.Children.includes(potentialchild.Id)
@@ -48,7 +53,7 @@ const CharacterType = `
     Mother: Character
     Spouse: Character
     Children: [Character]
-    Allegiances: [String]
+    Allegiances: [House]
     Books: [Int]
     PovBooks: [String]
     PlayedBy: [String]

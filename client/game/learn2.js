@@ -9,7 +9,8 @@ module.exports = {
   title: "LEARN: Just the One please",
   realsubTitle: "Pass an argument when making a query",
   character: "GRRM",
-  characterpic: "GRRM",
+  characterpic:
+    "http://vixenvarsity.com/wp-content/uploads/2014/06/George-RR-Martin.jpg",
   mission:
     "Return the **NumberOfPages** and **ReleaseDate** for the last **Book**",
   link: "http://graphql.org/learn/queries/#arguments",

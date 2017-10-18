@@ -11,7 +11,8 @@ module.exports = {
   title: "LEARN: A Query by any other Alias",
   realsubTitle: "Learn to alias query results",
   character: "GRRM",
-  characterpic: "GRRM",
+  characterpic:
+    "http://vixenvarsity.com/wp-content/uploads/2014/06/George-RR-Martin.jpg",
   mission:
     "Return the **NumberOfPages** and **ReleaseDate** for the two **Book**s that have **MediaType** of Graphic Novel and **alias** them to **HedgeKnight1** and **HedgeKnight2** in order",
   link: "http://graphql.org/learn/queries/#aliases",

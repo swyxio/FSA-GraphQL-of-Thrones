@@ -17,7 +17,8 @@ module.exports = {
   title: "LEARN: Keeping DRY",
   realsubTitle: "Define reusable query fragments",
   character: "GRRM",
-  characterpic: "GRRM",
+  characterpic:
+    "http://vixenvarsity.com/wp-content/uploads/2014/06/George-RR-Martin.jpg",
   mission:
     "Put **Name**, **Country**, **MediaType**, and **NumberOfPages** in a **fragment** and query the fragment for **Book** 4 and 6",
   link: "http://graphql.org/learn/queries/#fragments",

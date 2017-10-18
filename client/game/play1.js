@@ -2226,7 +2226,8 @@ module.exports = {
   title: "PLAY: House Words",
   realsubTitle: "Make a query on specific fields",
   character: "Bran",
-  characterpic: "Bran",
+  characterpic:
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA1NTg0NTI3MTBeQTJeQWpwZ15BbWU3MDEyNjg4OTQ@._V1._SX100_SY140_.jpg",
   mission: "Supply the **Name**, **Region**, and **Words** of **allHouses**.",
   link: "http://graphql.org/learn/queries/#fields",
   instructions: `Supply the **Name**, **Region**, and **Words** of **allHouses**

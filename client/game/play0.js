@@ -10,7 +10,8 @@ module.exports = {
 }`
   },
   character: "Hodor",
-  characterpic: "Hodor",
+  characterpic:
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzMzU4MDEyNF5BMl5BanBnXkFtZTcwNDM2ODg4OQ@@._V1._SX100_SY140_.jpg",
   mission: "Hodor hodor hodor HODOR HODOR hodor hodorrrrrr!",
   link: null,
   instructions: `Hodor has helpfully given you the answer above so you just need to type it in to the panel on the right (Just under 'GraphQL of Thrones'). 

@@ -21,7 +21,8 @@ module.exports = {
   title: "PLAY: Stannis's Claim",
   realsubTitle: "Learn to alias query results",
   character: "Stannis",
-  characterpic: "Stannis",
+  characterpic:
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BMjExNzY0NzI0NF5BMl5BanBnXkFtZTcwNjA2NDk4OQ@@._V1._SX100_SY140_.jpg",
   mission:
     "Set up two **Character** queries for Cersei and Jaime Lannister with the default fields and alias the results as **Cersei** and **Jaime**",
   link: "http://graphql.org/learn/queries/#aliases",

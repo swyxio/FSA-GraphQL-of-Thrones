@@ -21,7 +21,8 @@ module.exports = {
   title: "PLAY: Is that the bad man?",
   realsubTitle: "Pass an argument when making a query",
   character: "Lysa",
-  characterpic: "Lysa",
+  characterpic:
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BMmNlYTYzOTYtOTg1ZC00YzdlLTliNTgtZDhjMTY1MGViZTA5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
   mission:
     "Look up **allCharacters** by **Name** for Tyrion's Character Id, then request the **Aliases** and **Born** fields for this **Character**.",
   link: "http://graphql.org/learn/queries/#arguments",

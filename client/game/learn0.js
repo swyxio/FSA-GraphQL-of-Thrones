@@ -9,7 +9,8 @@ module.exports = {
 }`
   },
   character: "GRRM",
-  characterpic: "GRRM",
+  characterpic:
+    "http://vixenvarsity.com/wp-content/uploads/2014/06/George-RR-Martin.jpg",
   mission:
     "select the **Query Editor** and hit ⌘ + Enter to run the query and continue to the next level.",
   link: null,

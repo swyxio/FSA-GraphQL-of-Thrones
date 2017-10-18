@@ -10,7 +10,8 @@ module.exports = {
   title: "LEARN: Mutations",
   realsubTitle: "Creating, updating, or deleting information",
   character: "GRRM",
-  characterpic: "GRRM",
+  characterpic:
+    "http://vixenvarsity.com/wp-content/uploads/2014/06/George-RR-Martin.jpg",
   mission: `To pass this test, simply create a new comment with **CommenterName** "NewGraphQLUser" and **Comment** {your feedback for us, whatever you have!}!
     `,
   link: "http://graphql.org/learn/queries/#mutations",

@@ -55,7 +55,8 @@ module.exports = {
   title: "LEARN: Winter Is (Never) Coming",
   realsubTitle: "Make a query on specific fields",
   character: "GRRM",
-  characterpic: "GRRM",
+  characterpic:
+    "http://vixenvarsity.com/wp-content/uploads/2014/06/George-RR-Martin.jpg",
   mission:
     "Return the **Name** and **ReleaseDate** for the collection **allBooks**.",
   link: "http://graphql.org/learn/queries/#fields",

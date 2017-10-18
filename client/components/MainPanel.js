@@ -24,6 +24,7 @@ const graphQLFetcher = handleCorrectAnswer => graphQLParams => {
       // console.log("correctAnswer", localcurrentanswer);
       // include special hack for open ended addComment responses
       const addComment =
+        x.data &&
         x.data.addComment &&
         x.data.addComment.CommenterName == "NewGraphQLUser";
       if (addComment || _.isEqual(localcurrentanswer, x.data)) {

@@ -8,6 +8,7 @@ export default [
   require("./learn3"),
   require("./play3"),
   require("./learn4"),
+  require("./play4"),
   require("./learn5"),
   require("./learn6"),
   require("./learn7")
