@@ -53,6 +53,15 @@ class LandingPage extends React.Component {
                         Learn
                       </Link>
                     </li>
+                    <li className="nav-item mx-2">
+                      <a
+                        className="nav-link"
+                        href="https://github.com/sw-yx/FSA-GraphQL-of-Thrones"
+                        target="_blank"
+                      >
+                        Github
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>

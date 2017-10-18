@@ -48,14 +48,23 @@ class WinScreen extends React.Component {
                 >
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item active mx-2">
-                      <a className="nav-link" href="#">
-                        Home <span className="sr-only">(current)</span>
-                      </a>
+                      <Link className="nav-link" to="/">
+                        Home
+                      </Link>
                     </li>
                     <li className="nav-item mx-2">
                       <Link className="nav-link" to="/learn">
                         Learn
                       </Link>
+                    </li>
+                    <li className="nav-item mx-2">
+                      <a
+                        className="nav-link"
+                        href="https://github.com/sw-yx/FSA-GraphQL-of-Thrones"
+                        target="_blank"
+                      >
+                        Github
+                      </a>
                     </li>
                   </ul>
                 </div>
