@@ -179,7 +179,7 @@ const answer = {
 };
 
 module.exports = {
-  title: "PLAY: Keeping DRY",
+  title: "PLAY: House Greyjoy",
   realsubTitle: "Define reusable query fragments",
   character: "Maester Luwin",
   characterpic:
@@ -203,7 +203,7 @@ fragment HouseFields on House {
 }
     `
   },
-  instructions: `Yo Dawg, we heard you like fragments, so we put a fragment in your fragment...
+  instructions: `Yo dawg, we heard you like fragments, so we put a fragment in your fragment...
 
   A key feature of GraphQL is native recursion and nesting. Here your task is to set up two fragments, put one in the other, and make the final query. Make it happen!
   `,
@@ -212,7 +212,7 @@ fragment HouseFields on House {
 
 "Louder. Say Prince Theon."
 
-"I’ve yielded Winterfell to Prince Theon. All of you should do as he commands."
+"I’ve yielded Winterfell to Prince Theon **Greyjoy**. All of you should do as he commands."
 
 "My father has donned the ancient crown of Salt and Rock and declared himself King of the Iron Islands. He claims the North as well by right of conquest. You are all his subjects."
 
