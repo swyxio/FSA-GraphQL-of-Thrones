@@ -9,6 +9,10 @@ module.exports = {
 }`
   },
   character: "GRRM",
+  characterpic: "GRRM",
+  mission:
+    "select the **Query Editor** and hit ⌘ + Enter to run the query and continue to the next level.",
+  link: null,
   story: `This is a little playground we've set up for you to learn GraphQL. 
   
   It makes use of a little component called **GraphiQL** to help you mock up GraphQL queries.
@@ -20,11 +24,6 @@ module.exports = {
   **Your task is to make the queries that will give the correct responses we are looking for.**
 
   Once you're comfortable, select the **Query Editor** and hit ⌘ + Enter to run the query and continue to the next level.
-  
-  We will alternate between PLAY and LEARN modes:
-  
-  - LEARN introduces new concepts in a serious manner
-  - PLAY gives you a chance to apply this while roleplaying as a Game of Thrones character!
   `,
   instructions: `
   We will alternate between PLAY and LEARN modes. LEARN introduces new concepts in a serious manner, while in PLAY you get a chance to apply this while roleplaying as a Game of Thrones character.

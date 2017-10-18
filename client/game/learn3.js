@@ -11,6 +11,10 @@ module.exports = {
   title: "LEARN: A Query by any other Alias",
   realsubTitle: "Learn to alias query results",
   character: "GRRM",
+  characterpic: "GRRM",
+  mission:
+    "Return the **NumberOfPages** and **ReleaseDate** for the two **Book**s that have **MediaType** of Graphic Novel and **alias** them to **HedgeKnight1** and **HedgeKnight2** in order",
+  link: "http://graphql.org/learn/queries/#aliases",
   instructions: `Let's start exploring some of the unique benefits of GraphQL. Since you are simply specifying the shape of the response you want, you can query multiple versions of the same type of thing in a single request.
 
 However, when the data comes back, its key is by default the same as its type. What happens when you try to request two different books? Would it look like this?
@@ -43,9 +47,7 @@ Look at the results coming back. Not an error anymore! Progress!
 
 Now iterate on your query using all your knowledge so far to answer the question: What are the ISBNs of George R. R. Martin's two Hedge Knight Graphic Novels? Alias them as HedgeKnight1 and HedgeKnight2.
 
-Hint: Use **allBooks** and find their Id's first!
-  
-For more, check out: http://graphql.org/learn/queries/#aliases`,
+Hint: Use **allBooks** and find their Id's first!`,
   story: `Ok I've written a couple chapters. Thats enough for the year.
     Now I feel like drawing. Can you figure out the ISBN of my last two Graphic Novels?
     Oh, also could you name them HedgeKnight1 and HedgeKnight2 please.`,

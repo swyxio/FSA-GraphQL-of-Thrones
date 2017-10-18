@@ -10,6 +10,10 @@ module.exports = {
   title: "LEARN: Mutations",
   realsubTitle: "Creating, updating, or deleting information",
   character: "GRRM",
+  characterpic: "GRRM",
+  mission: `To pass this test, simply create a new comment with **CommenterName** "NewGraphQLUser" and **Comment** {your feedback for us, whatever you have!}!
+    `,
+  link: "http://graphql.org/learn/queries/#mutations",
   customgraphiql: {
     custquery: `
 # uncomment this to check your mutation result
@@ -34,8 +38,7 @@ mutation {
     `
   },
   instructions: `You can run the code as set up for you, but you can also play around with the fields as we have set them up for you!
-
-  For more, check out: http://graphql.org/learn/queries/#mutations`,
+  `,
   story: `Give us your feedback!
 
   Here we will show you how to do **mutations**, which are the last piece of the puzzle in CRUD operations with GraphQL.
@@ -43,8 +46,6 @@ mutation {
   Mutations involve side effects so in a sense they combine all the functionalities of PUT, POST, and DELETE from REST. 
   
   What they are allowed to do is defined by the backend.
-
-  To pass this test, simply create a new comment with **CommenterName** "NewGraphQLUser" and **Comment** {your feedback for us, whatever you have!}!
   `,
   answer: answer
 };

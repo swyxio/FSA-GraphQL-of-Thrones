@@ -1,10 +1,22 @@
 const answer = {
   allBooks: [
     {
-      Name: "A Game of Thrones",
+      Name: "The Hedge Knight",
+      Country: "United States",
+      MediaType: "Graphic Novel",
+      NumberOfPages: 164
+    },
+    {
+      Name: "The Mystery Knight",
+      Country: "United States",
+      MediaType: "Paperback",
+      NumberOfPages: 416
+    },
+    {
+      Name: "A Knight of the Seven Kingdoms",
       Country: "United States",
       MediaType: "Hardcover",
-      NumberOfPages: 694
+      NumberOfPages: 368
     }
   ]
 };
@@ -13,8 +25,16 @@ module.exports = {
   title: "LEARN: Query Variables",
   realsubTitle: "Use variables like a sane person would",
   character: "GRRM",
+  characterpic: "GRRM",
+  mission:
+    "Return the **usefulFields** for **allBooks** that match the **Name** field with your query variable **requestedName** of 'Knight'.",
+  link: "http://graphql.org/learn/queries/#variables",
   customgraphiql: {
-    custvariables: `{\n  "requestedId": 1\n}`,
+    custvariables: `{
+  "requestedId": 1,
+  "requestedName": "Knight"
+  
+}`,
     custquery: `
 query ($requestedId: Int!) {
   Book(Id: $requestedId) {
@@ -61,13 +81,12 @@ fragment usefulFields on Book {
 
   Hint: **Name** is of type **String**, whereas **Id** was of type **Int!** (the **!** denotes a required param)
   
-  How would you know that if we hadn't told you? You can always see all the schema setup in the Documentation Explorer panel on the far right. 
-
-  For more, check out: http://graphql.org/learn/queries/#variables`,
+  How would you know that if we hadn't told you? You can always see all the schema setup in the Documentation Explorer panel on the far right.`,
   story: `Thanks for setting up those fragments, they're going to be very handy.
   
   But I don't want to keep bothering you to help me set up these requests every time I need something done. 
-  Is there a way I can just give you just a book name and you set up the query to give me all books that match that name, with the same **useful fields** from last time?
+
+  Is there a way I can just give you just a word and you set up the query to give me all books that match that word, with the same **useful fields** from last time?
   `,
   answer: answer
 };

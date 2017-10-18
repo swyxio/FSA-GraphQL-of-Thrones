@@ -17,6 +17,10 @@ module.exports = {
   title: "LEARN: Keeping DRY",
   realsubTitle: "Define reusable query fragments",
   character: "GRRM",
+  characterpic: "GRRM",
+  mission:
+    "Put **Name**, **Country**, **MediaType**, and **NumberOfPages** in a **fragment** and query the fragment for **Book** 4 and 6",
+  link: "http://graphql.org/learn/queries/#fragments",
   customgraphiql: {
     custquery: `
 # please edit the below example query/fragment to answer the question!
@@ -59,6 +63,6 @@ Hint: remember to alias as HedgeKnight1 and HedgeKnight2.
 
 Can you also get the Name, Country, MediaType, and NumberOfPages for HedgeKnight1 and HedgeKnight2?
 
-Also, I'm probably gonna need those four **useful fields** of information a lot, you might want to save the query somehow or you're gonna have a looot of typing to do!`,
+Also, I'm probably gonna need those four **useful fields** of information later, you might want to save the query somehow or you're gonna have a looot of typing to do!`,
   answer: answer
 };
