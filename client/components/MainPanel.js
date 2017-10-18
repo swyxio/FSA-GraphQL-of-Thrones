@@ -79,6 +79,10 @@ class MainPanel extends React.Component {
                       {Hodoreasteregg}
                     </code>
                   </pre>}
+              </div>
+              <StyledAccordionItemHeader>Your Task</StyledAccordionItemHeader>
+              <div>
+                {md([gamestate.levelInfo.mission])}
                 <hr />
                 If you need help, please see the Instructions below.
               </div>
@@ -95,17 +99,14 @@ class MainPanel extends React.Component {
               <div>
                 {md([gamestate.levelInfo.instructions])}
               </div>
-              <StyledAccordionItemHeader>Your Task</StyledAccordionItemHeader>
-              <div>
-                {md([gamestate.levelInfo.mission])}
-              </div>
             </AccordionItem>
-            <AccordionItem title={"📓 Read the docs "} slug={3} key={3}>
-              For more, please read{" "}
-              <a href={gamestate.levelInfo.link} target="_blank">
-                {gamestate.levelInfo.link}
-              </a>!
-            </AccordionItem>
+            {gamestate.levelInfo.link &&
+              <AccordionItem title={"📓 Read the docs "} slug={3} key={3}>
+                For more, please read{" "}
+                <a href={gamestate.levelInfo.link} target="_blank">
+                  {gamestate.levelInfo.link}
+                </a>!
+              </AccordionItem>}
             <AccordionItem title={"🤼 Community"} slug={4} key={4}>
               We have yet to build out the community feature. In the meantime,
               please just yell at

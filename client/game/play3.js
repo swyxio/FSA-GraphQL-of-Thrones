@@ -1,19 +1,34 @@
 const answer = {
-  HedgeKnight1: {
-    ISBN: "978-0976401100"
+  Cersei: {
+    Id: "238",
+    Name: "Cersei Lannister",
+    IsFemale: true,
+    Culture: "Westerman",
+    Born: "In 266 AC, at Casterly Rock",
+    Died: ""
   },
-  HedgeKnight2: {
-    ISBN: "978-0785126508"
+  Jaime: {
+    Id: "529",
+    Name: "Jaime Lannister",
+    IsFemale: false,
+    Culture: "Westerlands",
+    Born: "In 266 AC, at Casterly Rock",
+    Died: ""
   }
 };
 
 module.exports = {
-  title: "PLAY: Maybe I should Draw?",
+  title: "PLAY: Stannis's Claim",
   realsubTitle: "Learn to alias query results",
   character: "Stannis",
+  characterpic: "Stannis",
+  mission:
+    "Set up two **Character** queries for Cersei and Jaime Lannister with the default fields and alias the results as **Cersei** and **Jaime**",
+  link: "http://graphql.org/learn/queries/#aliases",
   instructions: `Practice what you learned last lesson. Find Cersei and Jaime Lannister's Id's in **allCharacters**, then use those Id's in two parallel aliased **Character** requests. 
   
   Alias them as **Cersei** and **Jaime** respectively. The default fields will do: 
+
     - Id
     - Name
     - IsFemale
@@ -22,8 +37,7 @@ module.exports = {
     - Died
 
   If this feels repetitive, we will learn later how to take a shortcut with these _fragments_.
-  
-For more, check out: http://graphql.org/learn/queries/#aliases`,
+  `,
   story: `
 “That my brother Robert left no trueborn heirs, the boy Joffrey, the boy Tommen, 
 and the girl Myrcella being born of incest between Cersei Lannister and her brother Jaime Lannister. By right of birth…
