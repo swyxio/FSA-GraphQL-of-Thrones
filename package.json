@@ -55,6 +55,7 @@
     "sequelize": "^4.3.1",
     "socket.io": "^2.0.3",
     "styled-components": "^2.2.1",
+    "swyx": "^0.1.19",
     "swyx-graphiql": "^0.11.9"
   },
   "devDependencies": {
