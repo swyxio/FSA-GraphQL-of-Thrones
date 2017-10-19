@@ -196,14 +196,14 @@ class LandingPage extends React.Component {
                   </h4>
                 </div>
                 <div className="col-12 col-md-4 text-center align-center justify-center">
-                  <a className="btn btn-danger flat">
+                  <div className="btn btn-danger flat">
                     <span className="cwhite">
                       {/*<i className="m-2 fa fa-download" />*/}
                       <a href="https://www.howtographql.com/" target="_blank">
                         Let's get serious
                       </a>
                     </span>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>

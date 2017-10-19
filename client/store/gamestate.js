@@ -70,30 +70,3 @@ export default function(state = defaultLevelData, action) {
       return state;
   }
 }
-
-// /**
-//  * THUNK CREATORS
-//  */
-// export const me = () => dispatch =>
-//   axios
-//     .get("/auth/me")
-//     .then(res => dispatch(getUser(res.data || defaultUser)))
-//     .catch(err => console.log(err));
-
-// export const auth = (email, password, method) => dispatch =>
-//   axios
-//     .post(`/auth/${method}`, { email, password })
-//     .then(res => {
-//       dispatch(getUser(res.data));
-//       history.push("/home");
-//     })
-//     .catch(error => dispatch(getUser({ error })));
-
-// export const logout = () => dispatch =>
-//   axios
-//     .post("/auth/logout")
-//     .then(res => {
-//       dispatch(removeUser());
-//       history.push("/login");
-//     })
-//     .catch(err => console.log(err));

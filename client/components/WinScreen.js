@@ -148,33 +148,33 @@ class WinScreen extends React.Component {
                     <br />
                     <br />
                     Finally, here are other great resources for newbies:
-                    <ul>
-                      <li>
-                        <ALink
-                          href="https://medium.com/@kalin.chernev/the-guide-to-learn-graphql-i-wish-i-found-few-months-go-97f9d9ca6f12"
-                          text="A Learning Path to learn GraphQL"
-                        />
-                      </li>
-                      <li>
-                        <ALink
-                          href="https://www.howtographql.com/graphql-js/1-getting-started/"
-                          text="HowToGraphQL"
-                        />
-                      </li>
-                      <li>
-                        <ALink
-                          href="https://www.graphql.com/tutorials/"
-                          text="GraphQL official tutorial"
-                        />
-                      </li>
-                      <li>
-                        <ALink
-                          href="https://github.com/chentsulin/awesome-graphql"
-                          text="Awesome-GraphQL list of resources"
-                        />
-                      </li>
-                    </ul>
                   </p>
+                  <ul>
+                    <li>
+                      <ALink
+                        href="https://medium.com/@kalin.chernev/the-guide-to-learn-graphql-i-wish-i-found-few-months-go-97f9d9ca6f12"
+                        text="A Learning Path to learn GraphQL"
+                      />
+                    </li>
+                    <li>
+                      <ALink
+                        href="https://www.howtographql.com/graphql-js/1-getting-started/"
+                        text="HowToGraphQL"
+                      />
+                    </li>
+                    <li>
+                      <ALink
+                        href="https://www.graphql.com/tutorials/"
+                        text="GraphQL official tutorial"
+                      />
+                    </li>
+                    <li>
+                      <ALink
+                        href="https://github.com/chentsulin/awesome-graphql"
+                        text="Awesome-GraphQL list of resources"
+                      />
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -189,14 +189,14 @@ class WinScreen extends React.Component {
                   </h4>
                 </div>
                 <div className="col-12 col-md-4 text-center align-center justify-center">
-                  <a className="btn btn-danger flat">
+                  <div className="btn btn-danger flat">
                     <span className="cwhite">
                       {/*<i className="m-2 fa fa-download" />*/}
                       <a href="https://www.howtographql.com/" target="_blank">
                         Let's get serious
                       </a>
                     </span>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>

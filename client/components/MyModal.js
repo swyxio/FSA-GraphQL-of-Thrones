@@ -85,13 +85,6 @@ class MyModal extends React.Component {
   }
 }
 
-// <form>
-//   <input />
-//   <button>tab navigation</button>
-//   <button>stays</button>
-//   <button>inside</button>
-//   <button>the modal</button>
-// </form>
 /**
  * CONTAINER
  */

@@ -12,6 +12,6 @@ export default [
   require("./learn5"),
   require("./play5"),
   require("./learn6"),
-  // require("./play6"), // cant come up with a good scenario for this so just leaving it
+  // require("./play6"), // cant come up with a good scenario for this so just leaving it for now
   require("./learn7")
 ];

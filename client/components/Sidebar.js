@@ -32,7 +32,6 @@ class SidebarContent extends React.Component {
       ? { ...styles.sidebar, ...props.style }
       : styles.sidebar;
     const { gamestate } = this.props;
-    console.log("****", gamestate);
     const links = gamedata.map((singlegame, ind) =>
       <div
         key={ind}
