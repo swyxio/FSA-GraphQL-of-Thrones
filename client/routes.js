@@ -16,6 +16,15 @@ import {
 import { me } from "./store";
 import Sidebar from "react-sidebar";
 
+// https://github.com/react-ga/react-ga
+var ReactGA = require("react-ga");
+ReactGA.initialize("UA-79238211-5");
+
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname + window.location.search });
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
+
 /**
  * COMPONENT
  */
@@ -72,7 +81,7 @@ class Routes extends Component {
       onSetOpen: this.onSetOpen
     };
     return (
-      <Router history={history}>
+      <Router history={history} onUpdate={logPageView}>
         <Switch>
           <Route path="/greatsuccess" component={WinScreen} />
           <Route
