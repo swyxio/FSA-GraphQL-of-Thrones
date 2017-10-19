@@ -2241,14 +2241,6 @@ module.exports = {
 
 "And failed rebellions."
 
-"Sigil, a stag, a crowned stag now that Robert’s king."
-
-"Good."
-
-"Words: Ours is the fury. Lords: the Baratheons."
-
-"Mmhm."
-
 "The Westerlands. Sigil a lion. Words: A Lannister always pays his debts."
 
 ”No. A common saying, but not their official motto."
